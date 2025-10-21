@@ -3,13 +3,8 @@ import fs from "fs";
 import { type Server } from "http";
 import { nanoid } from "nanoid";
 import path from "path";
-import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
-
-// Get directory name for ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
@@ -30,12 +25,8 @@ export async function setupVite(app: Express, server: Server) {
     const url = req.originalUrl;
 
     try {
-      const clientTemplate = path.resolve(
-        __dirname,
-        "../..",
-        "client",
-        "index.html"
-      );
+      // In development, client is relative to project root
+      const clientTemplate = path.join(process.cwd(), "client", "index.html");
 
       // always reload the index.html file from disk incase it changes
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
@@ -53,18 +44,17 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  // In production on Railway, the dist is at /app/dist/public
-  const distPath = process.env.NODE_ENV === "production"
-    ? path.join(process.cwd(), "dist", "public")
-    : path.resolve(__dirname, "../..", "dist", "public");
-    
+  // In production on Railway, the structure is:
+  // /app/dist/index.js (server)
+  // /app/dist/public/ (client files)
+  const distPath = "/app/dist/public";
+  
   console.log(`[Static] Serving from: ${distPath}`);
   console.log(`[Static] Directory exists: ${fs.existsSync(distPath)}`);
   
-  if (!fs.existsSync(distPath)) {
-    console.error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`
-    );
+  if (fs.existsSync(distPath)) {
+    const files = fs.readdirSync(distPath);
+    console.log(`[Static] Files in dist/public:`, files);
   }
 
   app.use(express.static(distPath));
@@ -73,7 +63,11 @@ export function serveStatic(app: Express) {
   app.use("*", (_req, res) => {
     const indexPath = path.join(distPath, "index.html");
     console.log(`[Static] Serving index.html from: ${indexPath}`);
-    res.sendFile(indexPath);
+    if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath);
+    } else {
+      res.status(404).send("index.html not found");
+    }
   });
 }
 
