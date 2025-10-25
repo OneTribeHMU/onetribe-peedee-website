@@ -33,6 +33,9 @@ export default function Home() {
             <Link href="/services">
               <a className="text-gray-700 hover:text-green-700 font-medium">Services</a>
             </Link>
+            <Link href="/uhuru-academy">
+              <a className="text-gray-700 hover:text-purple-700 font-medium">Uhuru Academy</a>
+            </Link>
             <Link href="/blog">
               <a className="text-gray-700 hover:text-green-700 font-medium">Blog</a>
             </Link>
@@ -71,6 +74,35 @@ export default function Home() {
               Learn More
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Uhuru Academy 2026 Announcement */}
+      <section className="py-16 px-6 bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <Badge className="mb-4 bg-amber-500 text-white text-lg px-6 py-2 animate-pulse">
+            🎓 COMING 2026
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Uhuru Academy Low Country SC
+          </h2>
+          <p className="text-2xl mb-3 text-blue-100">
+            Sankofa: Looking Back to Move Forward
+          </p>
+          <p className="text-lg mb-6 text-blue-200 max-w-2xl mx-auto">
+            A revolutionary community school cultivating freedom through Culture, Agriculture, 
+            Fine Arts, and Technology. First Summer Camp launches Summer 2026!
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/uhuru-academy">
+              <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-lg px-8">
+                Learn More & Join Our Community
+              </Button>
+            </Link>
+          </div>
+          <p className="mt-4 text-sm text-blue-300">
+            📍 5-Acre Campus in Kingstree, SC | Founded by Curtis Heru Boyd
+          </p>
         </div>
       </section>
 
