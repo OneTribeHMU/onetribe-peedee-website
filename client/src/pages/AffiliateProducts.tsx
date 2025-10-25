@@ -14,6 +14,7 @@ const affiliateProducts = [
     url: "https://store.secretenergy.com/product/hydrolux-ultra/?ref=curtisheru",
     category: "Technology",
     featured: true,
+    image: "/images/products/hydrolux-ultra.png",
     benefits: [
       "Produces molecular hydrogen for optimal cellular health",
       "Supports energy production and mental clarity",
@@ -37,18 +38,20 @@ const affiliateProducts = [
     category: "Supplements",
   },
   {
-    name: "Shilajit",
+    name: "Shilajit Mountain Gold",
     description: "Ancient Himalayan resin packed with 85+ minerals and fulvic acid for sustained energy and vitality",
     price: "$44.00 - $108.00",
     url: "https://store.secretenergy.com/product/shilajit/?ref=curtisheru",
     category: "Supplements",
+    image: "/images/products/shilajit.png",
   },
   {
     name: "Regeneration Salve",
-    description: "Magnesium and Zeolite formula for muscle recovery, pain relief, and skin regeneration",
+    description: "Medical-grade Magnesium Sulfate Salve for soft tissue restoration, muscle pain relief, and joint discomfort",
     price: "$50.00",
     url: "https://store.secretenergy.com/product/regeneration-salve-magnesium-and-zeolite-formula/?ref=curtisheru",
     category: "Supplements",
+    image: "/images/products/regeneration-salve.png",
   },
   {
     name: "Molecular Hydrogen Bath Bomb",
@@ -155,6 +158,15 @@ export default function AffiliateProducts() {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
+                    {featuredProduct.image && (
+                      <div className="mb-6 flex justify-center">
+                        <img 
+                          src={featuredProduct.image} 
+                          alt={featuredProduct.name}
+                          className="w-full max-w-md h-64 object-contain rounded-lg"
+                        />
+                      </div>
+                    )}
                     <h3 className="text-2xl font-bold mb-4 text-purple-900">
                       Why We Love Hydrolux Ultra
                     </h3>
@@ -248,6 +260,15 @@ export default function AffiliateProducts() {
             {filteredProducts.map((product, idx) => (
               <Card key={idx} className="hover:shadow-xl transition-shadow">
                 <CardHeader>
+                  {product.image && (
+                    <div className="mb-4 flex justify-center">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-48 object-contain rounded-lg"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-start justify-between mb-2">
                     <Badge className="bg-purple-100 text-purple-900">
                       {product.category}

@@ -24,6 +24,7 @@ const affiliateProducts: AffiliateProduct[] = [
     url: "https://store.secretenergy.com/product/hydrolux-ultra/?ref=curtisheru",
     category: "Technology",
     featured: true,
+    image: "/images/products/hydrolux-ultra.png",
   },
   {
     name: "Nano Gold",
@@ -33,18 +34,20 @@ const affiliateProducts: AffiliateProduct[] = [
     category: "Supplements",
   },
   {
-    name: "Shilajit",
+    name: "Shilajit Mountain Gold",
     description: "Ancient Himalayan resin packed with 85+ minerals and fulvic acid for energy and vitality",
     price: "$44.00 - $108.00",
     url: "https://store.secretenergy.com/product/shilajit/?ref=curtisheru",
     category: "Supplements",
+    image: "/images/products/shilajit.png",
   },
   {
     name: "Regeneration Salve",
-    description: "Magnesium and Zeolite formula for muscle recovery and skin regeneration",
+    description: "Medical-grade Magnesium Sulfate Salve for muscle recovery and skin regeneration",
     price: "$50.00",
     url: "https://store.secretenergy.com/product/regeneration-salve-magnesium-and-zeolite-formula/?ref=curtisheru",
     category: "Supplements",
+    image: "/images/products/regeneration-salve.png",
   },
   {
     name: "Molecular Hydrogen Bath Bomb",
@@ -135,6 +138,15 @@ export default function AffiliateWidget({
         </div>
       </CardHeader>
       <CardContent>
+        {currentProduct.image && (
+          <div className="mb-4 flex justify-center">
+            <img 
+              src={currentProduct.image} 
+              alt={currentProduct.name}
+              className="w-full max-w-sm h-48 object-contain rounded-lg"
+            />
+          </div>
+        )}
         <p className="text-gray-700 mb-4">{currentProduct.description}</p>
         
         <div className="flex items-center gap-3 mb-4">
