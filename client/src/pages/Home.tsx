@@ -13,11 +13,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src={APP_LOGO}
-              className="h-10 w-10 rounded-lg border-border bg-background object-cover"
-              alt="OneTribe Logo"
+              src="/images/onetribe-amagi-logo.png"
+              className="h-12 w-12 object-contain"
+              alt="OneTribe Ama-Gi Logo"
             />
-            <span className="text-2xl font-bold text-green-800">{APP_TITLE}</span>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-amber-700">OneTribe</span>
+              <span className="text-xs text-gray-600 -mt-1">AMA-GI</span>
+            </div>
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -45,26 +48,26 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20 px-6">
+      <section className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <Badge className="mb-4 bg-green-700 text-white text-sm px-4 py-1">
+          <Badge className="mb-4 bg-amber-600 text-white text-sm px-4 py-1">
             Natural Wellness Marketplace
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Welcome to OneTribe
             <br />
-            <span className="text-green-700">Your Wellness Community</span>
+            <span className="text-amber-700">Ama-Gi: Return to Freedom</span>
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             Discover curated wellness products from trusted brands committed to natural health, 
             sustainability, and holistic living. From farm-fresh teas to cold-pressed juices and beyond.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-green-700 hover:bg-green-800 text-lg px-8">
+            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-lg px-8">
               <ShoppingBag className="mr-2 h-5 w-5" />
               Shop Products
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-green-700 text-green-700 hover:bg-green-50">
+            <Button size="lg" variant="outline" className="text-lg px-8 border-amber-600 text-amber-700 hover:bg-amber-50">
               Learn More
             </Button>
           </div>
