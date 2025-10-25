@@ -3,6 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import Products from "@/pages/Products";
 import UhuruAcademy from "@/pages/UhuruAcademy";
+import AffiliateProducts from "@/pages/AffiliateProducts";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -14,6 +15,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/products"} component={Products} />
       <Route path={"/uhuru-academy"} component={UhuruAcademy} />
+      <Route path={"/affiliate-products"} component={AffiliateProducts} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import AffiliateWidget from "@/components/AffiliateWidget";
 import { APP_LOGO, APP_TITLE } from "@/const";
 import { Droplets, Leaf, Mail, Phone, ShoppingBag, Sparkles, Store, Users, Wrench } from "lucide-react";
 import { Link } from "wouter";
@@ -29,6 +30,9 @@ export default function Home() {
             </Link>
             <Link href="/products">
               <a className="text-gray-700 hover:text-green-700 font-medium">Products</a>
+            </Link>
+            <Link href="/affiliate-products">
+              <a className="text-gray-700 hover:text-purple-700 font-medium">Wellness Partners</a>
             </Link>
             <Link href="/services">
               <a className="text-gray-700 hover:text-green-700 font-medium">Services</a>
@@ -103,6 +107,28 @@ export default function Home() {
           <p className="mt-4 text-sm text-blue-300">
             📍 5-Acre Campus in Kingstree, SC | Founded by Curtis Heru Boyd
           </p>
+        </div>
+      </section>
+
+      {/* Affiliate Products Widget */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              Trusted Wellness Partners
+            </h2>
+            <p className="text-gray-600">
+              10+ Years with Secret Energy • Products We Use Daily
+            </p>
+          </div>
+          <AffiliateWidget featured={true} autoRotate={true} rotationInterval={6000} />
+          <div className="text-center mt-6">
+            <Link href="/affiliate-products">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                View All Partner Products
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
