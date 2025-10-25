@@ -57,12 +57,31 @@ export function serveStatic(app: Express) {
     console.log(`[Static] Files in dist/public:`, files);
   }
 
-  app.use(express.static(distPath));
+  // Serve static files with proper options
+  app.use(express.static(distPath, {
+    maxAge: '1d',
+    setHeaders: (res, filePath) => {
+      // Set proper content type for images
+      if (filePath.endsWith('.png')) {
+        res.setHeader('Content-Type', 'image/png');
+      } else if (filePath.endsWith('.jpg') || filePath.endsWith('.jpeg')) {
+        res.setHeader('Content-Type', 'image/jpeg');
+      } else if (filePath.endsWith('.webp')) {
+        res.setHeader('Content-Type', 'image/webp');
+      }
+    }
+  }));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
+  // fall through to index.html ONLY if the file doesn't exist
+  app.use("*", (req, res, next) => {
+    // Don't serve index.html for API routes or static file requests
+    if (req.originalUrl.startsWith('/api/') || 
+        req.originalUrl.match(/\.(png|jpg|jpeg|gif|svg|webp|css|js|ico)$/)) {
+      return next();
+    }
+    
     const indexPath = path.join(distPath, "index.html");
-    console.log(`[Static] Serving index.html from: ${indexPath}`);
+    console.log(`[Static] Serving index.html for: ${req.originalUrl}`);
     if (fs.existsSync(indexPath)) {
       res.sendFile(indexPath);
     } else {
