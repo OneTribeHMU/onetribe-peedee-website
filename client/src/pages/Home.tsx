@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_LOGO, APP_TITLE } from "@/const";
-import { Droplets, Leaf, ShoppingBag, Sparkles, Users, Wrench } from "lucide-react";
+import { Droplets, Leaf, Mail, Phone, ShoppingBag, Sparkles, Users, Wrench } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -259,9 +259,23 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-white font-bold text-lg mb-4">OneTribe Pee Dee Aquaponics</h3>
-            <p className="text-sm">
+            <p className="text-sm mb-4">
               Bringing natural wellness and sustainable agriculture to the Pee Dee region.
             </p>
+            <div className="space-y-2 text-sm">
+              <p className="flex items-center gap-2">
+                <Mail className="h-4 w-4" />
+                <a href="mailto:Curtisheru@onetribe.io" className="hover:text-white">
+                  Curtisheru@onetribe.io
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <a href="tel:8032015723" className="hover:text-white">
+                  (803) 201-5723
+                </a>
+              </p>
+            </div>
           </div>
 
           <div>
@@ -295,6 +309,9 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-sm">
           <p>&copy; 2025 OneTribe Pee Dee Aquaponics. All rights reserved.</p>
+          <p className="mt-2 text-gray-500">
+            Made with love in the Pee Dee region | Social: @PeeDeeAquaponics
+          </p>
         </div>
       </footer>
     </div>
