@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { APP_LOGO, APP_TITLE } from "@/const";
-import { Droplets, Leaf, Mail, Phone, ShoppingBag, Sparkles, Users, Wrench } from "lucide-react";
+import { Droplets, Leaf, Mail, Phone, ShoppingBag, Sparkles, Store, Users, Wrench } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -46,14 +47,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
+          <Badge className="mb-4 bg-green-700 text-white text-sm px-4 py-1">
+            Natural Wellness Marketplace
+          </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-6">
-            Fresh, Natural Wellness
+            Welcome to OneTribe
             <br />
-            <span className="text-green-700">From Farm to Cup</span>
+            <span className="text-green-700">Your Wellness Community</span>
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Experience the power of nature with our cold-pressed juices, artisanal Sarsaparilla tea, 
-            and holistic wellness coaching. Grown sustainably through aquaponics in the Pee Dee region.
+            Discover curated wellness products from trusted brands committed to natural health, 
+            sustainability, and holistic living. From farm-fresh teas to cold-pressed juices and beyond.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button size="lg" className="bg-green-700 hover:bg-green-800 text-lg px-8">
@@ -67,19 +71,118 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Flagship Brand Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Why Choose OneTribe?
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-amber-600 text-white">Flagship Brand</Badge>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Pee Dee Aquaponics
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our signature brand bringing you wild-harvested Sarsaparilla rhizome tea, 
+              cold-pressed juices, and sustainably-grown wellness products from the Pee Dee region.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div className="flex justify-center">
+              <img 
+                src="/images/brands/peedee-aquaponics-logo.png" 
+                alt="Pee Dee Aquaponics Logo"
+                className="w-80 h-80 object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Sustainably Grown, Naturally Potent
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Pee Dee Aquaponics represents our commitment to sustainable agriculture and natural wellness. 
+                Using eco-friendly aquaponics systems, we grow nutrient-rich produce while conserving water 
+                and eliminating chemical runoff.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Our signature product - wild-harvested Sarsaparilla rhizome tea - showcases our dedication 
+                to preserving traditional herbal wisdom while applying modern sustainability practices.
+              </p>
+              <Link href="/products">
+                <Button className="bg-green-700 hover:bg-green-800">
+                  Explore Pee Dee Products
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured Products from Pee Dee Aquaponics */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <img 
+                  src="/images/products/sarsaparilla-package-hero.jpg" 
+                  alt="Sarsaparilla Tea"
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <CardTitle className="text-lg">Sarsaparilla Rhizome Tea</CardTitle>
+                <CardDescription>Wild-harvested, 100% natural</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold text-green-700 mb-3">$12.99</p>
+                <Button className="w-full bg-green-700 hover:bg-green-800">View Product</Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <img 
+                  src="/images/products/pure-juicer-2.jpg" 
+                  alt="Cold-Pressed Juices"
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <CardTitle className="text-lg">Cold-Pressed Juices</CardTitle>
+                <CardDescription>Seasonal fruit blends</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold text-green-700 mb-3">$5.99</p>
+                <Button className="w-full bg-green-700 hover:bg-green-800">View Product</Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <img 
+                  src="/images/products/rhizome-harvest.jpg" 
+                  alt="Fresh Harvest"
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <CardTitle className="text-lg">Custom Blends</CardTitle>
+                <CardDescription>Personalized wellness teas</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-xl font-bold text-green-700 mb-3">Contact for pricing</p>
+                <Button variant="outline" className="w-full border-green-700 text-green-700">Inquire</Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* OneTribe Values Section */}
+      <section className="py-16 px-6 bg-green-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
+            The OneTribe Promise
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Every brand in our marketplace shares our commitment to quality, sustainability, and holistic wellness
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-green-200">
               <CardHeader>
                 <Leaf className="h-12 w-12 text-green-700 mb-4" />
                 <CardTitle>100% Natural</CardTitle>
                 <CardDescription>
-                  No artificial ingredients, preservatives, or additives. Just pure, farm-fresh goodness.
+                  No artificial ingredients, preservatives, or additives. Just pure, farm-fresh goodness from trusted sources.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -87,9 +190,9 @@ export default function Home() {
             <Card className="border-green-200">
               <CardHeader>
                 <Droplets className="h-12 w-12 text-blue-600 mb-4" />
-                <CardTitle>Sustainable Aquaponics</CardTitle>
+                <CardTitle>Sustainable Practices</CardTitle>
                 <CardDescription>
-                  Grown using eco-friendly aquaponics systems that conserve water and eliminate chemical runoff.
+                  All our brands prioritize eco-friendly methods, from aquaponics to organic farming and ethical sourcing.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -108,13 +211,13 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-6 bg-green-50">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
             Our Services
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            From mobile juicing to wellness coaching, we bring health and vitality to your community
+            Beyond products, we bring wellness directly to your community
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -163,73 +266,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            Featured Products
+      {/* Future Brands Teaser */}
+      <section className="py-16 px-6 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <Store className="h-16 w-16 text-purple-700 mx-auto mb-6" />
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            More Brands Coming Soon
           </h2>
-          <p className="text-center text-gray-600 mb-12">
-            Discover our signature offerings and curated wellness products
+          <p className="text-lg text-gray-700 mb-6">
+            OneTribe is growing! We're partnering with carefully selected wellness brands that share 
+            our values of sustainability, natural ingredients, and holistic health. Stay tuned for 
+            new products and services from trusted partners.
           </p>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="aspect-square bg-amber-100 rounded-lg mb-4 flex items-center justify-center">
-                  <Leaf className="h-16 w-16 text-amber-700" />
-                </div>
-                <CardTitle className="text-lg">Sarsaparilla Tea</CardTitle>
-                <CardDescription>Our signature herbal blend</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-2xl font-bold text-green-700 mb-3">$12.99</p>
-                <Button className="w-full bg-green-700 hover:bg-green-800">Add to Cart</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="aspect-square bg-orange-100 rounded-lg mb-4 flex items-center justify-center">
-                  <Droplets className="h-16 w-16 text-orange-700" />
-                </div>
-                <CardTitle className="text-lg">Cold-Pressed Juice</CardTitle>
-                <CardDescription>Seasonal fruit blends</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-2xl font-bold text-green-700 mb-3">$5.99</p>
-                <Button className="w-full bg-green-700 hover:bg-green-800">Add to Cart</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="aspect-square bg-green-100 rounded-lg mb-4 flex items-center justify-center">
-                  <Leaf className="h-16 w-16 text-green-700" />
-                </div>
-                <CardTitle className="text-lg">Herbal Wellness Kit</CardTitle>
-                <CardDescription>Curated tea collection</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-2xl font-bold text-green-700 mb-3">$34.99</p>
-                <Button className="w-full bg-green-700 hover:bg-green-800">Add to Cart</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="aspect-square bg-purple-100 rounded-lg mb-4 flex items-center justify-center">
-                  <Sparkles className="h-16 w-16 text-purple-700" />
-                </div>
-                <CardTitle className="text-lg">Affiliate Products</CardTitle>
-                <CardDescription>Trusted wellness brands</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 mb-3">Curated selection</p>
-                <Button variant="outline" className="w-full">Browse All</Button>
-              </CardContent>
-            </Card>
-          </div>
+          <Button variant="outline" className="border-purple-700 text-purple-700 hover:bg-purple-50">
+            <Mail className="mr-2 h-5 w-5" />
+            Join Our Newsletter
+          </Button>
         </div>
       </section>
 
@@ -258,9 +310,9 @@ export default function Home() {
       <footer className="bg-gray-900 text-gray-300 py-12 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">OneTribe Pee Dee Aquaponics</h3>
+            <h3 className="text-white font-bold text-lg mb-4">OneTribe</h3>
             <p className="text-sm mb-4">
-              Bringing natural wellness and sustainable agriculture to the Pee Dee region.
+              A curated wellness marketplace featuring natural products from trusted brands committed to your health and the planet.
             </p>
             <div className="space-y-2 text-sm">
               <p className="flex items-center gap-2">
@@ -279,21 +331,20 @@ export default function Home() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Shop</h4>
+            <h4 className="text-white font-semibold mb-4">Shop Brands</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/products" className="hover:text-white">All Products</a></li>
-              <li><a href="/products/teas" className="hover:text-white">Teas</a></li>
-              <li><a href="/products/juices" className="hover:text-white">Juices</a></li>
-              <li><a href="/products/affiliate" className="hover:text-white">Affiliate Products</a></li>
+              <li><a href="/products" className="hover:text-white">Pee Dee Aquaponics</a></li>
+              <li><a href="/products#affiliate" className="hover:text-white">Partner Brands</a></li>
+              <li className="text-gray-500">More brands coming soon</li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/services/juicing" className="hover:text-white">Mobile Juicing</a></li>
-              <li><a href="/services/rental" className="hover:text-white">Equipment Rental</a></li>
-              <li><a href="/services/coaching" className="hover:text-white">Wellness Coaching</a></li>
+              <li><a href="/services" className="hover:text-white">Mobile Juicing</a></li>
+              <li><a href="/services" className="hover:text-white">Equipment Rental</a></li>
+              <li><a href="/services" className="hover:text-white">Wellness Coaching</a></li>
             </ul>
           </div>
 
@@ -301,16 +352,16 @@ export default function Home() {
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="/blog" className="hover:text-white">Blog</a></li>
-              <li><a href="/about" className="hover:text-white">About Us</a></li>
+              <li><a href="/about" className="hover:text-white">About OneTribe</a></li>
               <li><a href="/contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-          <p>&copy; 2025 OneTribe Pee Dee Aquaponics. All rights reserved.</p>
+          <p>&copy; 2025 OneTribe. All rights reserved.</p>
           <p className="mt-2 text-gray-500">
-            Made with love in the Pee Dee region | Social: @PeeDeeAquaponics
+            Featuring Pee Dee Aquaponics and trusted wellness partners | Social: @OneTribe @PeeDeeAquaponics
           </p>
         </div>
       </footer>
