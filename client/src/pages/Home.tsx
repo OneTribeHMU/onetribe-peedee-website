@@ -38,7 +38,13 @@ export default function Home() {
               <a className="text-gray-700 hover:text-green-700 font-medium">Services</a>
             </Link>
             <Link href="/uhuru-academy">
-              <a className="text-gray-700 hover:text-purple-700 font-medium">Uhuru Academy</a>
+              <a className="text-gray-700 hover:text-green-700 font-medium">Uhuru Academy</a>
+            </Link>
+            <Link href="/afrorobics">
+              <a className="text-gray-700 hover:text-green-700 font-medium">AfroRobics</a>
+            </Link>
+            <Link href="/faq">
+              <a className="text-gray-700 hover:text-green-700 font-medium">FAQ</a>
             </Link>
             <Link href="/blog">
               <a className="text-gray-700 hover:text-green-700 font-medium">Blog</a>
@@ -292,7 +298,9 @@ export default function Home() {
                   Fresh juice while you wait! Bring your own fruit or choose from our custom blends. 
                   $3-5 per cup, with seasonal specials.
                 </p>
-                <Button variant="outline" className="w-full">Book Now</Button>
+                <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button variant="outline" className="w-full">Book Now</Button>
+                </a>
               </CardContent>
             </Card>
 
@@ -306,7 +314,9 @@ export default function Home() {
                   Rent our professional juicing equipment for your farm stand or event. 
                   $50-75/day plus deposit.
                 </p>
-                <Button variant="outline" className="w-full">Get Quote</Button>
+                <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button variant="outline" className="w-full">Get Quote</Button>
+                </a>
               </CardContent>
             </Card>
 
@@ -320,7 +330,9 @@ export default function Home() {
                   Personalized guidance on nutrition, holistic health, and incorporating natural remedies 
                   into your lifestyle.
                 </p>
-                <Button variant="outline" className="w-full">Learn More</Button>
+                <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button variant="outline" className="w-full">Schedule Consultation</Button>
+                </a>
               </CardContent>
             </Card>
           </div>

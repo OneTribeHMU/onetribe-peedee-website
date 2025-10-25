@@ -4,6 +4,8 @@ import NotFound from "@/pages/NotFound";
 import Products from "@/pages/Products";
 import UhuruAcademy from "@/pages/UhuruAcademy";
 import AffiliateProducts from "@/pages/AffiliateProducts";
+import AfroRobics from "@/pages/AfroRobics";
+import FAQ from "@/pages/FAQ";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -16,6 +18,8 @@ function Router() {
       <Route path={"/products"} component={Products} />
       <Route path={"/uhuru-academy"} component={UhuruAcademy} />
       <Route path={"/affiliate-products"} component={AffiliateProducts} />
+      <Route path={"/afrorobics"} component={AfroRobics} />
+      <Route path={"/faq"} component={FAQ} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
