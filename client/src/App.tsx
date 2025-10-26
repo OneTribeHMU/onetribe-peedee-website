@@ -6,6 +6,7 @@ import UhuruAcademy from "@/pages/UhuruAcademy";
 import AffiliateProducts from "@/pages/AffiliateProducts";
 import AfroRobics from "@/pages/AfroRobics";
 import FAQ from "@/pages/FAQ";
+import Services from "@/pages/Services";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -20,6 +21,7 @@ function Router() {
       <Route path={"/affiliate-products"} component={AffiliateProducts} />
       <Route path={"/afrorobics"} component={AfroRobics} />
       <Route path={"/faq"} component={FAQ} />
+      <Route path={"/services"} component={Services} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
