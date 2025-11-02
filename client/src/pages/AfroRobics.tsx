@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Heart, Music, Zap, Users, Calendar, MapPin } from "lucide-react";
+import { Heart, Music, Zap, Users, Calendar, MapPin, Video, Youtube } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -25,14 +25,20 @@ export default function AfroRobics() {
         </div>
         
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <Badge className="mb-6 bg-amber-500 text-white text-lg px-8 py-3 animate-bounce">
-            <Music className="inline h-6 w-6 mr-2" />
-            Home-Grown Movement
+          {/* Logo */}
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="/images/logos/afrorobics-logo.png" 
+              alt="AfroRobics Logo"
+              className="w-64 h-64 object-contain drop-shadow-2xl"
+            />
+          </div>
+
+          {/* Livestream Announcement */}
+          <Badge className="mb-6 bg-red-600 text-white text-lg px-8 py-3 animate-pulse">
+            <Video className="inline h-6 w-6 mr-2" />
+            LIVE STREAMING STARTS THIS TUESDAY!
           </Badge>
-          
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
-            AfroRobics
-          </h1>
           
           <p className="text-3xl md:text-4xl mb-8 font-light text-cyan-100">
             Movement Meditation Through Ancestral Rhythms
@@ -44,16 +50,110 @@ export default function AfroRobics() {
             it's a celebration of culture, wellness, and freedom.
           </p>
 
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 justify-center flex-wrap mb-8">
             <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-xl px-8 py-6">
                 <Calendar className="mr-2 h-6 w-6" />
                 Book a Class
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 text-xl px-8 py-6">
-              Watch Demo
-            </Button>
+            <a href="https://discord.gg/8CTbKaNd" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-xl px-8 py-6">
+                <svg className="mr-2 h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+                Join Discord
+              </Button>
+            </a>
+          </div>
+
+          {/* Tuesday Livestream Info */}
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto border-2 border-white/30">
+            <p className="text-2xl font-bold mb-2">🎥 Every Tuesday Evening</p>
+            <p className="text-lg text-cyan-100">
+              Join us LIVE for movement meditation • First stream starts in 2 days!
+            </p>
+            <p className="text-sm text-cyan-200 mt-2">
+              Get the Zoom link in our Discord community
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Membership Section */}
+      <section className="py-16 px-6 bg-gradient-to-br from-teal-50 to-cyan-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-4 border-teal-200">
+            <div className="text-center mb-8">
+              <Badge className="mb-4 bg-teal-600 text-white text-lg px-6 py-2">
+                FEATURED MEMBERSHIP
+              </Badge>
+              <h2 className="text-5xl font-bold text-gray-900 mb-4">
+                $40<span className="text-3xl text-gray-600">/month</span>
+              </h2>
+              <p className="text-2xl text-teal-700 font-semibold mb-2">
+                Unlimited Access to Everything
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <Card className="border-2 border-teal-200 bg-teal-50">
+                <CardHeader className="text-center">
+                  <MapPin className="h-10 w-10 text-teal-600 mx-auto mb-2" />
+                  <CardTitle className="text-lg">Local Classes</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-gray-700 text-sm">
+                    Unlimited in-person classes in Kingstree, SC
+                  </p>
+                  <p className="text-xs text-gray-600 mt-2">
+                    Tues/Thurs 6-7 PM<br/>Sat 10-11:30 AM
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-indigo-200 bg-indigo-50">
+                <CardHeader className="text-center">
+                  <Video className="h-10 w-10 text-indigo-600 mx-auto mb-2" />
+                  <CardTitle className="text-lg">Live Streaming</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-gray-700 text-sm">
+                    Join live every Tuesday evening via Zoom
+                  </p>
+                  <p className="text-xs text-gray-600 mt-2">
+                    Interactive • Real-time<br/>Community connection
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-red-200 bg-red-50">
+                <CardHeader className="text-center">
+                  <Youtube className="h-10 w-10 text-red-600 mx-auto mb-2" />
+                  <CardTitle className="text-lg">YouTube Archive</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-gray-700 text-sm">
+                    Access all recorded classes anytime
+                  </p>
+                  <p className="text-xs text-gray-600 mt-2">
+                    Practice on your schedule<br/>Full library access
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="space-y-4">
+              <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
+                <Button size="lg" className="w-full bg-teal-600 hover:bg-teal-700 text-xl py-6">
+                  <Calendar className="mr-2 h-6 w-6" />
+                  Start Your Membership
+                </Button>
+              </a>
+              <p className="text-center text-gray-600">
+                Or contact us: <a href="mailto:Curtisheru@onetribe.io" className="text-teal-600 hover:underline font-semibold">Curtisheru@onetribe.io</a> | <a href="tel:+18032015723" className="text-teal-600 hover:underline font-semibold">(803) 201-5723</a>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -105,301 +205,387 @@ export default function AfroRobics() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  Build connections with others on the same wellness journey. AfroRobics 
-                  creates a supportive tribe where everyone moves together.
+                  Experience the energy of collective movement. AfroRobics builds bonds, 
+                  celebrates diversity, and creates a supportive wellness tribe.
                 </p>
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-gradient-to-r from-cyan-50 to-teal-50 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">The AfroRobics Method</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-teal-900">🥁 Warm-Up: Drum Circle</h4>
-                <p className="text-gray-700 mb-4">
-                  Begin with grounding exercises and rhythmic breathing synchronized to live drumming.
+      {/* The AfroRobics Method */}
+      <section className="py-16 px-6 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+            The AfroRobics Method
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-white/80 backdrop-blur">
+              <CardHeader>
+                <Badge className="w-fit mb-2 bg-cyan-600">Step 1</Badge>
+                <CardTitle className="text-2xl">Warm-Up & Intention Setting</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">
+                  Begin with gentle stretches and breathing exercises. Set your intention 
+                  for the session and connect with the group energy.
                 </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-teal-900">💃 Movement Flow</h4>
-                <p className="text-gray-700 mb-4">
-                  Dynamic sequences blending African dance, capoeira, and martial arts forms.
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/80 backdrop-blur">
+              <CardHeader>
+                <Badge className="w-fit mb-2 bg-teal-600">Step 2</Badge>
+                <CardTitle className="text-2xl">Rhythmic Cardio Flow</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">
+                  Engage in high-energy dance sequences inspired by African movements. 
+                  Build cardiovascular endurance while celebrating cultural expression.
                 </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-teal-900">⚡ Power Conditioning</h4>
-                <p className="text-gray-700 mb-4">
-                  Strength training disguised as dance—build muscle while having fun.
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/80 backdrop-blur">
+              <CardHeader>
+                <Badge className="w-fit mb-2 bg-emerald-600">Step 3</Badge>
+                <CardTitle className="text-2xl">Strength & Flexibility</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">
+                  Incorporate martial arts-inspired movements and bodyweight exercises. 
+                  Develop functional strength, balance, and flexibility.
                 </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-teal-900">🧘 Cool-Down Meditation</h4>
-                <p className="text-gray-700 mb-4">
-                  End with guided meditation and stretching to integrate the experience.
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/80 backdrop-blur">
+              <CardHeader>
+                <Badge className="w-fit mb-2 bg-amber-600">Step 4</Badge>
+                <CardTitle className="text-2xl">Cool-Down & Meditation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">
+                  Close with guided meditation and gentle stretching. Reflect on your 
+                  practice and carry the energy into your day.
                 </p>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-teal-50 to-cyan-50">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
             Transform Your Wellness
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <Zap className="h-10 w-10 text-amber-500 mb-3" />
-                <CardTitle>Physical Benefits</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Cardiovascular endurance and stamina</span>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-teal-700 mb-6">Physical Benefits</h3>
+              <ul className="space-y-4">
+                {[
+                  "Improved cardiovascular health and endurance",
+                  "Increased strength, flexibility, and coordination",
+                  "Better posture and body awareness",
+                  "Weight management and toning",
+                  "Enhanced energy levels throughout the day"
+                ].map((benefit, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Zap className="h-6 w-6 text-amber-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">{benefit}</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Full-body strength and muscle tone</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Improved flexibility and coordination</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Weight management and metabolism boost</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Better posture and body awareness</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                ))}
+              </ul>
+            </div>
 
-            <Card>
-              <CardHeader>
-                <Heart className="h-10 w-10 text-red-500 mb-3" />
-                <CardTitle>Mental & Spiritual Benefits</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Stress reduction and emotional release</span>
+            <div>
+              <h3 className="text-2xl font-bold text-purple-700 mb-6">Mental & Spiritual Benefits</h3>
+              <ul className="space-y-4">
+                {[
+                  "Reduced stress and anxiety",
+                  "Improved mental clarity and focus",
+                  "Deeper connection to cultural heritage",
+                  "Enhanced self-confidence and body positivity",
+                  "Sense of community and belonging"
+                ].map((benefit, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Heart className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">{benefit}</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Enhanced mental clarity and focus</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Cultural connection and identity affirmation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Community belonging and support</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">✓</span>
-                    <span>Joy, confidence, and self-expression</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Class Schedule & Pricing */}
-      <section className="py-16 px-6 bg-white">
+      {/* Pricing Options */}
+      <section className="py-16 px-6 bg-gradient-to-br from-teal-50 to-cyan-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-            Join a Class
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+            Choose Your Path
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Whether you're ready to commit or want to try a single class, we have options for everyone
+          </p>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="border-2 border-cyan-300">
-              <CardHeader>
-                <Badge className="mb-3 bg-cyan-600">Drop-In</Badge>
-                <CardTitle className="text-3xl">$15</CardTitle>
-                <CardDescription>Per Class</CardDescription>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-2 border-gray-200">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl mb-2">Drop-In</CardTitle>
+                <p className="text-4xl font-bold text-gray-900">$15</p>
+                <p className="text-gray-600">per class</p>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start gap-2">
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>Single session access</span>
+                    <span className="text-gray-700">Single class access</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>All levels welcome</span>
+                    <span className="text-gray-700">No commitment</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>No commitment</span>
+                    <span className="text-gray-700">Try before you buy</span>
                   </li>
                 </ul>
                 <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button className="w-full bg-cyan-600 hover:bg-cyan-700">
-                    Book Drop-In
-                  </Button>
+                  <Button variant="outline" className="w-full">Book Drop-In</Button>
                 </a>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-teal-300 relative">
-              <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-amber-500 text-white">
-                Most Popular
+            <Card className="border-4 border-teal-600 shadow-2xl relative">
+              <Badge className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-teal-600 text-white px-6 py-2">
+                BEST VALUE
               </Badge>
-              <CardHeader>
-                <Badge className="mb-3 bg-teal-600">Monthly</Badge>
-                <CardTitle className="text-3xl">$50</CardTitle>
-                <CardDescription>Per Month</CardDescription>
+              <CardHeader className="text-center pt-8">
+                <CardTitle className="text-2xl mb-2">Monthly Membership</CardTitle>
+                <p className="text-5xl font-bold text-teal-700">$40</p>
+                <p className="text-gray-600">per month</p>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start gap-2">
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>Unlimited classes</span>
+                    <span className="text-gray-700 font-semibold">Unlimited local classes</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>Priority scheduling</span>
+                    <span className="text-gray-700 font-semibold">Live streaming access</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>Community events access</span>
+                    <span className="text-gray-700 font-semibold">YouTube archive</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>Save $10/month</span>
+                    <span className="text-gray-700 font-semibold">Discord community</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span>
+                    <span className="text-gray-700 font-semibold">Priority booking</span>
                   </li>
                 </ul>
                 <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                  <Button className="w-full bg-teal-600 hover:bg-teal-700 text-lg py-6">
                     Start Membership
                   </Button>
                 </a>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-emerald-300">
-              <CardHeader>
-                <Badge className="mb-3 bg-emerald-600">Private</Badge>
-                <CardTitle className="text-3xl">$75</CardTitle>
-                <CardDescription>Per Session</CardDescription>
+            <Card className="border-2 border-gray-200">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl mb-2">Private Session</CardTitle>
+                <p className="text-4xl font-bold text-gray-900">$75</p>
+                <p className="text-gray-600">per session</p>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start gap-2">
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>One-on-one instruction</span>
+                    <span className="text-gray-700">One-on-one instruction</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>Customized program</span>
+                    <span className="text-gray-700">Personalized program</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>Flexible scheduling</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600">✓</span>
-                    <span>Wellness coaching included</span>
+                    <span className="text-gray-700">Flexible scheduling</span>
                   </li>
                 </ul>
                 <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
-                    Book Private Session
-                  </Button>
+                  <Button variant="outline" className="w-full">Schedule Private</Button>
                 </a>
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
 
-          <Card className="bg-gradient-to-r from-cyan-100 to-teal-100 border-2 border-teal-300">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-4">
-                <MapPin className="h-8 w-8 text-teal-700 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Current Schedule
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    <strong>Tuesdays & Thursdays:</strong> 6:00 PM - 7:00 PM<br/>
-                    <strong>Saturdays:</strong> 10:00 AM - 11:30 AM (Extended Session)<br/>
-                    <strong>Location:</strong> Kingstree Community Center, SC
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Private sessions available by appointment. We also offer group classes 
-                    for schools, community centers, and corporate wellness programs.
-                  </p>
+      {/* Class Schedule */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+            Class Schedule
+          </h2>
+
+          <div className="space-y-4">
+            <Card className="border-l-4 border-l-teal-600">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle className="text-xl">Tuesday Evening</CardTitle>
+                    <CardDescription className="text-base">6:00 PM - 7:00 PM</CardDescription>
+                  </div>
+                  <Badge className="bg-red-600 text-white">LIVE STREAMING</Badge>
                 </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 mb-2">
+                  <MapPin className="inline h-4 w-4 mr-1" />
+                  In-person: Kingstree, SC
+                </p>
+                <p className="text-gray-700">
+                  <Video className="inline h-4 w-4 mr-1" />
+                  Online: Zoom link in Discord
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-cyan-600">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle className="text-xl">Thursday Evening</CardTitle>
+                    <CardDescription className="text-base">6:00 PM - 7:00 PM</CardDescription>
+                  </div>
+                  <Badge className="bg-teal-600 text-white">LOCAL ONLY</Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">
+                  <MapPin className="inline h-4 w-4 mr-1" />
+                  In-person: Kingstree, SC
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-amber-600">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <CardTitle className="text-xl">Saturday Morning</CardTitle>
+                    <CardDescription className="text-base">10:00 AM - 11:30 AM</CardDescription>
+                  </div>
+                  <Badge className="bg-amber-600 text-white">EXTENDED SESSION</Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">
+                  <MapPin className="inline h-4 w-4 mr-1" />
+                  In-person: Kingstree, SC
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Curtis */}
+      <section className="py-16 px-6 bg-gradient-to-br from-cyan-50 to-teal-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
+            Meet Your Instructor
+          </h2>
+          
+          <Card className="bg-white/80 backdrop-blur">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Curtis Heru Boyd</h3>
+              <p className="text-teal-700 font-semibold mb-4">Founder & Lead Instructor</p>
+              
+              <p className="text-gray-700 mb-4">
+                Curtis Heru Boyd created AfroRobics as a home-grown movement to reconnect people 
+                with their bodies, heritage, and community. With a background in wellness coaching, 
+                sustainable agriculture, and community education, Curtis brings a holistic approach 
+                to fitness that honors tradition while embracing modern wellness practices.
+              </p>
+              
+              <p className="text-gray-700 mb-6">
+                As the founder of OneTribe Ama-Gi, Pee Dee Aquaponics, and Uhuru Academy, Curtis 
+                is dedicated to creating spaces where people can achieve freedom through natural 
+                wellness, movement, and education.
+              </p>
+
+              <div className="flex gap-4 flex-wrap">
+                <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-teal-600 hover:bg-teal-700">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Book a Session
+                  </Button>
+                </a>
+                <a href="mailto:Curtisheru@onetribe.io">
+                  <Button variant="outline">
+                    Contact Curtis
+                  </Button>
+                </a>
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Meet the Instructor */}
-      <section className="py-16 px-6 bg-gradient-to-br from-amber-50 to-orange-50">
+      {/* CTA Section */}
+      <section className="py-16 px-6 bg-gradient-to-br from-teal-700 via-cyan-700 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Meet Curtis Heru Boyd
-          </h2>
-          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            Creator of AfroRobics and founder of OneTribe Ama-Gi. Curtis brings over 15 years 
-            of experience in martial arts, African dance, and holistic wellness. His mission is 
-            to help people reconnect with their bodies, culture, and community through movement.
-          </p>
-          <p className="text-lg text-gray-600 mb-8">
-            "AfroRobics isn't just about getting fit—it's about remembering who you are and 
-            celebrating that with every move. When we dance together, we heal together."
-          </p>
-          <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700">
-              Schedule a Free Consultation
-            </Button>
-          </a>
-        </div>
-      </section>
-
-      {/* Email Signup */}
-      <section className="py-16 px-6 bg-gradient-to-br from-teal-900 to-cyan-900 text-white">
-        <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">
-            Join the AfroRobics Movement
+            Join the Movement
           </h2>
-          <p className="text-xl mb-8 text-cyan-100">
-            Get class updates, wellness tips, and exclusive community events
+          <p className="text-xl mb-8">
+            Experience the power of ancestral rhythms and community wellness. 
+            Your first class starts with a simple conversation.
           </p>
           
-          <form onSubmit={handleEmailSubmit} className="flex gap-3 max-w-md mx-auto">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 bg-white/10 border-white/30 text-white placeholder:text-white/60"
-            />
-            <Button type="submit" className="bg-amber-500 hover:bg-amber-600">
-              Join Now
-            </Button>
-          </form>
+          <div className="flex gap-4 justify-center flex-wrap mb-8">
+            <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-xl px-8 py-6">
+                <Calendar className="mr-2 h-6 w-6" />
+                Start Your Journey
+              </Button>
+            </a>
+            <a href="https://discord.gg/8CTbKaNd" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 text-xl px-8 py-6">
+                <svg className="mr-2 h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+                Join Discord
+              </Button>
+            </a>
+          </div>
 
-          <p className="text-sm text-cyan-200 mt-4">
-            Contact: <a href="mailto:Curtisheru@onetribe.io" className="underline">Curtisheru@onetribe.io</a> | (803) 201-5723
+          <p className="text-cyan-100">
+            Questions? Contact us: <a href="mailto:Curtisheru@onetribe.io" className="text-white hover:underline font-semibold">Curtisheru@onetribe.io</a> | <a href="tel:+18032015723" className="text-white hover:underline font-semibold">(803) 201-5723</a>
           </p>
         </div>
       </section>
+
+      {/* Back to Home */}
+      <div className="py-8 px-6 bg-white text-center">
+        <Link href="/">
+          <Button variant="outline" className="border-teal-600 text-teal-700 hover:bg-teal-50">
+            ← Back to OneTribe Home
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import AffiliateWidget from "@/components/AffiliateWidget";
 import { APP_LOGO, APP_TITLE } from "@/const";
-import { Droplets, Leaf, Mail, Phone, ShoppingBag, Sparkles, Store, Users, Wrench } from "lucide-react";
+import { Droplets, Leaf, Mail, Phone, ShoppingBag, Sparkles, Store, Users, Wrench, Calendar } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/images/onetribe-amagi-logo.png"
+              src="/images/logos/onetribe-amagi-logo.png"
               className="h-12 w-12 object-contain"
               alt="OneTribe Ama-Gi Logo"
             />
@@ -24,39 +24,32 @@ export default function Home() {
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/">
-              <a className="text-gray-700 hover:text-green-700 font-medium">Home</a>
-            </Link>
-            <Link href="/products">
-              <a className="text-gray-700 hover:text-green-700 font-medium">Products</a>
-            </Link>
-            <Link href="/affiliate-products">
-              <a className="text-gray-700 hover:text-purple-700 font-medium">Wellness Partners</a>
-            </Link>
-            <Link href="/services">
-              <a className="text-gray-700 hover:text-green-700 font-medium">Services</a>
-            </Link>
-            <Link href="/uhuru-academy">
-              <a className="text-gray-700 hover:text-green-700 font-medium">Uhuru Academy</a>
-            </Link>
-            <Link href="/afrorobics">
-              <a className="text-gray-700 hover:text-green-700 font-medium">AfroRobics</a>
-            </Link>
-            <Link href="/faq">
-              <a className="text-gray-700 hover:text-green-700 font-medium">FAQ</a>
-            </Link>
-            <Link href="/blog">
-              <a className="text-gray-700 hover:text-green-700 font-medium">Blog</a>
-            </Link>
-            <Link href="/contact">
-              <a className="text-gray-700 hover:text-green-700 font-medium">Contact</a>
-            </Link>
-          </nav>
+          <div className="flex items-center gap-4">
+            {/* Discord Quick Access */}
+            <a
+              href="https://discord.gg/8CTbKaNd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-colors font-semibold"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+              </svg>
+              <span>Join Discord</span>
+            </a>
 
-          <Button className="bg-green-700 hover:bg-green-800">
-            Shop Now
-          </Button>
+            <nav className="hidden md:flex items-center gap-4">
+              <Link href="/"><a className="text-gray-700 hover:text-green-700 font-medium">Home</a></Link>
+              <Link href="/products"><a className="text-gray-700 hover:text-green-700 font-medium">Products</a></Link>
+              <Link href="/afrorobics"><a className="text-gray-700 hover:text-teal-600 font-medium">AfroRobics</a></Link>
+              <Link href="/uhuru-academy"><a className="text-gray-700 hover:text-purple-700 font-medium">Uhuru Academy</a></Link>
+              <Link href="/faq"><a className="text-gray-700 hover:text-green-700 font-medium">FAQ</a></Link>
+            </nav>
+
+            <Link href="/products">
+              <Button className="bg-green-700 hover:bg-green-800">Shop Now</Button>
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -72,52 +65,131 @@ export default function Home() {
             <span className="text-amber-700">Ama-Gi: Return to Freedom</span>
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Discover curated wellness products from trusted brands committed to natural health, 
-            sustainability, and holistic living. From farm-fresh teas to cold-pressed juices and beyond.
+            Discover curated wellness products, movement meditation, and community education committed to natural health, 
+            sustainability, and holistic living.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-lg px-8">
-              <ShoppingBag className="mr-2 h-5 w-5" />
-              Shop Products
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-amber-600 text-amber-700 hover:bg-amber-50">
-              Learn More
-            </Button>
+            <Link href="/products">
+              <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-lg px-8">
+                <ShoppingBag className="mr-2 h-5 w-5" />
+                Shop Products
+              </Button>
+            </Link>
+            <a href="https://discord.gg/8CTbKaNd" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="text-lg px-8 border-indigo-600 text-indigo-700 hover:bg-indigo-50">
+                Join Our Community
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Uhuru Academy 2026 Announcement */}
-      <section className="py-16 px-6 bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <Badge className="mb-4 bg-amber-500 text-white text-lg px-6 py-2 animate-pulse">
-            🎓 COMING 2026
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Uhuru Academy Low Country SC
-          </h2>
-          <p className="text-2xl mb-3 text-blue-100">
-            Sankofa: Looking Back to Move Forward
-          </p>
-          <p className="text-lg mb-6 text-blue-200 max-w-2xl mx-auto">
-            A revolutionary community school cultivating freedom through Culture, Agriculture, 
-            Fine Arts, and Technology. First Summer Camp launches Summer 2026!
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+      {/* Flagship Brands Section */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-amber-600 text-white">Our Flagship Brands</Badge>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              OneTribe Core Offerings
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Three pillars of wellness: sustainable agriculture, movement meditation, and community education
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            {/* Pee Dee Aquaponics */}
+            <Card className="border-2 border-green-200 hover:shadow-xl transition-shadow">
+              <CardHeader className="text-center">
+                <img 
+                  src="/images/brands/peedee-aquaponics-logo.png" 
+                  alt="Pee Dee Aquaponics Logo"
+                  className="w-48 h-48 object-contain mx-auto mb-4"
+                />
+                <CardTitle className="text-2xl text-green-700">Pee Dee Aquaponics</CardTitle>
+                <CardDescription className="text-base">
+                  Wild-Harvested Sarsaparilla Rhizome Tea • Cold-Pressed Juices • Sustainable Wellness Products
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 mb-4">
+                  Our signature agricultural brand bringing you wild-harvested Sarsaparilla rhizome tea 
+                  (the only one using rhizome!), cold-pressed seasonal juices, and sustainably-grown wellness products.
+                </p>
+                <Link href="/products">
+                  <Button className="w-full bg-green-700 hover:bg-green-800">
+                    Shop Pee Dee Products
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* AfroRobics */}
+            <Card className="border-2 border-teal-200 hover:shadow-xl transition-shadow">
+              <CardHeader className="text-center">
+                <img 
+                  src="/images/logos/afrorobics-logo.png" 
+                  alt="AfroRobics Logo"
+                  className="w-48 h-48 object-contain mx-auto mb-4"
+                />
+                <CardTitle className="text-2xl text-teal-700">AfroRobics</CardTitle>
+                <CardDescription className="text-base">
+                  Movement Meditation • Local Classes • Live Streaming • Community Wellness
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-teal-50 border-2 border-teal-200 rounded-lg p-4 mb-4">
+                  <div className="text-center">
+                    <p className="text-sm text-teal-700 font-semibold mb-1">FEATURED MEMBERSHIP</p>
+                    <p className="text-3xl font-bold text-teal-700 mb-1">$40<span className="text-lg">/month</span></p>
+                    <p className="text-sm text-gray-600">Unlimited Local Classes + Live Streaming + YouTube Archive</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Movement meditation through ancestral rhythms. Join us for local classes in Kingstree, SC, 
+                  or stream live every Tuesday evening. First livestream starts in 2 days!
+                </p>
+                <div className="space-y-2">
+                  <Link href="/afrorobics">
+                    <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                      Learn More & Join
+                    </Button>
+                  </Link>
+                  <a href="https://discord.gg/8CTbKaNd" target="_blank" rel="noopener noreferrer" className="block">
+                    <Button variant="outline" className="w-full border-indigo-600 text-indigo-700 hover:bg-indigo-50">
+                      Join Discord Community
+                    </Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Uhuru Academy Teaser */}
+          <div className="bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white rounded-2xl p-8 text-center">
+            <Badge className="mb-4 bg-amber-500 text-white text-lg px-6 py-2 animate-pulse">
+              🎓 COMING 2026
+            </Badge>
+            <h3 className="text-3xl font-bold mb-3">Uhuru Academy Low Country SC</h3>
+            <p className="text-xl mb-2 text-blue-100">Sankofa: Looking Back to Move Forward</p>
+            <p className="text-base mb-6 text-blue-200 max-w-2xl mx-auto">
+              A revolutionary community school cultivating freedom through Culture, Agriculture, Fine Arts, and Technology. 
+              First Summer Camp launches Summer 2026!
+            </p>
             <Link href="/uhuru-academy">
-              <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-lg px-8">
+              <Button size="lg" className="bg-amber-500 hover:bg-amber-600">
                 Learn More & Join Our Community
               </Button>
             </Link>
+            <p className="mt-4 text-sm text-blue-300">
+              📍 5-Acre Campus in Kingstree, SC | Founded by Curtis Heru Boyd
+            </p>
           </div>
-          <p className="mt-4 text-sm text-blue-300">
-            📍 5-Acre Campus in Kingstree, SC | Founded by Curtis Heru Boyd
-          </p>
         </div>
       </section>
 
       {/* Affiliate Products Widget */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
@@ -138,153 +210,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Flagship Brand Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <Badge className="mb-4 bg-amber-600 text-white">Flagship Brand</Badge>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Pee Dee Aquaponics
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our signature brand bringing you wild-harvested Sarsaparilla rhizome tea, 
-              cold-pressed juices, and sustainably-grown wellness products from the Pee Dee region.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div className="flex justify-center">
-              <img 
-                src="/images/brands/peedee-aquaponics-logo.png" 
-                alt="Pee Dee Aquaponics Logo"
-                className="w-80 h-80 object-contain"
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Sustainably Grown, Naturally Potent
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Pee Dee Aquaponics represents our commitment to sustainable agriculture and natural wellness. 
-                Using eco-friendly aquaponics systems, we grow nutrient-rich produce while conserving water 
-                and eliminating chemical runoff.
-              </p>
-              <p className="text-gray-700 mb-6">
-                Our signature product - wild-harvested Sarsaparilla rhizome tea - showcases our dedication 
-                to preserving traditional herbal wisdom while applying modern sustainability practices.
-              </p>
-              <Link href="/products">
-                <Button className="bg-green-700 hover:bg-green-800">
-                  Explore Pee Dee Products
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* Featured Products from Pee Dee Aquaponics */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <img 
-                  src="/images/products/sarsaparilla-package-hero.jpg" 
-                  alt="Sarsaparilla Tea"
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
-                <CardTitle className="text-lg">Sarsaparilla Rhizome Tea</CardTitle>
-                <CardDescription>Wild-harvested, 100% natural</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-2xl font-bold text-green-700 mb-3">$12.99</p>
-                <Button className="w-full bg-green-700 hover:bg-green-800">View Product</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <img 
-                  src="/images/products/pure-juicer-2.jpg" 
-                  alt="Cold-Pressed Juices"
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
-                <CardTitle className="text-lg">Cold-Pressed Juices</CardTitle>
-                <CardDescription>Seasonal fruit blends</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-2xl font-bold text-green-700 mb-3">$5.99</p>
-                <Button className="w-full bg-green-700 hover:bg-green-800">View Product</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <img 
-                  src="/images/products/rhizome-harvest.jpg" 
-                  alt="Fresh Harvest"
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
-                <CardTitle className="text-lg">Custom Blends</CardTitle>
-                <CardDescription>Personalized wellness teas</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-xl font-bold text-green-700 mb-3">Contact for pricing</p>
-                <Button variant="outline" className="w-full border-green-700 text-green-700">Inquire</Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* OneTribe Values Section */}
-      <section className="py-16 px-6 bg-green-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            The OneTribe Promise
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Every brand in our marketplace shares our commitment to quality, sustainability, and holistic wellness
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-green-200">
-              <CardHeader>
-                <Leaf className="h-12 w-12 text-green-700 mb-4" />
-                <CardTitle>100% Natural</CardTitle>
-                <CardDescription>
-                  No artificial ingredients, preservatives, or additives. Just pure, farm-fresh goodness from trusted sources.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-green-200">
-              <CardHeader>
-                <Droplets className="h-12 w-12 text-blue-600 mb-4" />
-                <CardTitle>Sustainable Practices</CardTitle>
-                <CardDescription>
-                  All our brands prioritize eco-friendly methods, from aquaponics to organic farming and ethical sourcing.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-green-200">
-              <CardHeader>
-                <Sparkles className="h-12 w-12 text-amber-600 mb-4" />
-                <CardTitle>Wellness Focused</CardTitle>
-                <CardDescription>
-                  Every product is crafted to support your health journey with nutrient-rich, healing ingredients.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            Our Services
+            Additional Services
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Beyond products, we bring wellness directly to your community
+            Beyond products and classes, we bring wellness directly to your community
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -299,7 +232,10 @@ export default function Home() {
                   $3-5 per cup, with seasonal specials.
                 </p>
                 <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button variant="outline" className="w-full">Book Now</Button>
+                  <Button variant="outline" className="w-full">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Book Now
+                  </Button>
                 </a>
               </CardContent>
             </Card>
@@ -315,7 +251,10 @@ export default function Home() {
                   $50-75/day plus deposit.
                 </p>
                 <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button variant="outline" className="w-full">Get Quote</Button>
+                  <Button variant="outline" className="w-full">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Get Quote
+                  </Button>
                 </a>
               </CardContent>
             </Card>
@@ -331,30 +270,14 @@ export default function Home() {
                   into your lifestyle.
                 </p>
                 <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button variant="outline" className="w-full">Schedule Consultation</Button>
+                  <Button variant="outline" className="w-full">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Schedule Consultation
+                  </Button>
                 </a>
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
-
-      {/* Future Brands Teaser */}
-      <section className="py-16 px-6 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <Store className="h-16 w-16 text-purple-700 mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            More Brands Coming Soon
-          </h2>
-          <p className="text-lg text-gray-700 mb-6">
-            OneTribe is growing! We're partnering with carefully selected wellness brands that share 
-            our values of sustainability, natural ingredients, and holistic health. Stay tuned for 
-            new products and services from trusted partners.
-          </p>
-          <Button variant="outline" className="border-purple-700 text-purple-700 hover:bg-purple-50">
-            <Mail className="mr-2 h-5 w-5" />
-            Join Our Newsletter
-          </Button>
         </div>
       </section>
 
@@ -364,17 +287,21 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-4">
             Ready to Transform Your Wellness?
           </h2>
-          <p className="text-xl mb-8 text-green-100">
-            Join the OneTribe community and experience the difference that natural, 
-            sustainably-grown products can make in your life.
+          <p className="text-xl mb-8">
+            Join the OneTribe community and experience the difference that natural, sustainably-grown products 
+            and movement meditation can make in your life.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-white text-green-700 hover:bg-green-50 text-lg px-8">
-              Shop Now
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-white text-white hover:bg-green-600">
-              Contact Us
-            </Button>
+            <Link href="/products">
+              <Button size="lg" className="bg-white text-green-700 hover:bg-gray-100">
+                Shop Now
+              </Button>
+            </Link>
+            <a href="mailto:Curtisheru@onetribe.io">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-green-600">
+                Contact Us
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -383,59 +310,67 @@ export default function Home() {
       <footer className="bg-gray-900 text-gray-300 py-12 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">OneTribe</h3>
+            <h3 className="text-white font-bold text-lg mb-4">OneTribe Ama-Gi</h3>
             <p className="text-sm mb-4">
-              A curated wellness marketplace featuring natural products from trusted brands committed to your health and the planet.
+              Natural wellness marketplace featuring Pee Dee Aquaponics, AfroRobics movement meditation, 
+              and Uhuru Academy community education.
             </p>
-            <div className="space-y-2 text-sm">
-              <p className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
+            <a href="https://discord.gg/8CTbKaNd" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+              </svg>
+              Join Discord
+            </a>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Our Brands</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/products"><a className="hover:text-white">Pee Dee Aquaponics</a></Link></li>
+              <li><Link href="/afrorobics"><a className="hover:text-white">AfroRobics</a></Link></li>
+              <li><Link href="/uhuru-academy"><a className="hover:text-white">Uhuru Academy</a></Link></li>
+              <li><Link href="/affiliate-products"><a className="hover:text-white">Wellness Partners</a></Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/"><a className="hover:text-white">Home</a></Link></li>
+              <li><Link href="/faq"><a className="hover:text-white">FAQ</a></Link></li>
+              <li><Link href="/blog"><a className="hover:text-white">Blog</a></Link></li>
+              <li><Link href="/contact"><a className="hover:text-white">Contact</a></Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Contact Us</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start gap-2">
+                <Mail className="h-4 w-4 mt-1 flex-shrink-0" />
                 <a href="mailto:Curtisheru@onetribe.io" className="hover:text-white">
                   Curtisheru@onetribe.io
                 </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:8032015723" className="hover:text-white">
+              </li>
+              <li className="flex items-start gap-2">
+                <Phone className="h-4 w-4 mt-1 flex-shrink-0" />
+                <a href="tel:+18032015723" className="hover:text-white">
                   (803) 201-5723
                 </a>
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4">Shop Brands</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="/products" className="hover:text-white">Pee Dee Aquaponics</a></li>
-              <li><a href="/products#affiliate" className="hover:text-white">Partner Brands</a></li>
-              <li className="text-gray-500">More brands coming soon</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="/services" className="hover:text-white">Mobile Juicing</a></li>
-              <li><a href="/services" className="hover:text-white">Equipment Rental</a></li>
-              <li><a href="/services" className="hover:text-white">Wellness Coaching</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4">Connect</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="/blog" className="hover:text-white">Blog</a></li>
-              <li><a href="/about" className="hover:text-white">About OneTribe</a></li>
-              <li><a href="/contact" className="hover:text-white">Contact</a></li>
+              </li>
+              <li>
+                <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold">
+                  <Calendar className="h-4 w-4" />
+                  Book Free 15-Min Call
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-          <p>&copy; 2025 OneTribe. All rights reserved.</p>
-          <p className="mt-2 text-gray-500">
-            Featuring Pee Dee Aquaponics and trusted wellness partners | Social: @OneTribe @PeeDeeAquaponics
-          </p>
+          <p>&copy; 2025 OneTribe Ama-Gi. All rights reserved.</p>
+          <p className="mt-2 text-gray-500">Ama-Gi: Return to Freedom</p>
         </div>
       </footer>
     </div>
