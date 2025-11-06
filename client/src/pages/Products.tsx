@@ -132,11 +132,13 @@ export default function Products() {
                         <p className="text-3xl font-bold text-green-700">$12.99</p>
                         <p className="text-sm text-gray-600">Per package</p>
                       </div>
-                      <Button size="lg" className="bg-green-700 hover:bg-green-800">
-                        <ShoppingCart className="mr-2 h-5 w-5" />
-                        Add to Cart
-                      </Button>
-                      <a href="mailto:Curtisheru@onetribe.io" className="text-sm text-green-700 hover:underline">
+                      <Link href="/contact">
+                        <Button size="lg" className="bg-green-700 hover:bg-green-800 w-full">
+                          <ShoppingCart className="mr-2 h-5 w-5" />
+                          Order Now
+                        </Button>
+                      </Link>
+                      <a href="mailto:Curtisheru@onetribe.io" className="text-sm text-green-700 hover:underline text-center block">
                         Bulk orders? Contact us
                       </a>
                     </div>
@@ -251,10 +253,12 @@ export default function Products() {
                       Work with us to create a custom tea blend tailored to your wellness goals.
                     </p>
                     <p className="text-xl font-bold text-green-700 mb-3">Contact for pricing</p>
-                    <Button variant="outline" className="w-full border-green-700 text-green-700">
-                      <Mail className="mr-2 h-4 w-4" />
-                      Inquire
-                    </Button>
+                    <Link href="/contact">
+                      <Button variant="outline" className="w-full border-green-700 text-green-700">
+                        <Mail className="mr-2 h-4 w-4" />
+                        Inquire
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
 
@@ -268,10 +272,12 @@ export default function Products() {
                     <p className="text-gray-600 text-sm mb-4">
                       Interested in carrying our Sarsaparilla tea in your store? We offer wholesale pricing.
                     </p>
-                    <Button variant="outline" className="w-full border-green-700 text-green-700">
-                      <Mail className="mr-2 h-4 w-4" />
-                      Get Wholesale Info
-                    </Button>
+                    <Link href="/contact">
+                      <Button variant="outline" className="w-full border-green-700 text-green-700">
+                        <Mail className="mr-2 h-4 w-4" />
+                        Get Wholesale Info
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </div>
@@ -360,10 +366,12 @@ export default function Products() {
                       Vitamin C powerhouse to boost immunity and energy. Currently in season!
                     </p>
                     <p className="text-2xl font-bold text-green-700 mb-3">$5.99</p>
-                    <Button className="w-full bg-green-700 hover:bg-green-800">
-                      <ShoppingCart className="mr-2 h-4 w-4" />
-                      Order Now
-                    </Button>
+                    <Link href="/contact">
+                      <Button className="w-full bg-green-700 hover:bg-green-800">
+                        <ShoppingCart className="mr-2 h-4 w-4" />
+                        Order Now
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
 
@@ -380,10 +388,12 @@ export default function Products() {
                       Nutrient-dense green juice for detox and daily wellness support.
                     </p>
                     <p className="text-2xl font-bold text-green-700 mb-3">$6.99</p>
-                    <Button className="w-full bg-green-700 hover:bg-green-800">
-                      <ShoppingCart className="mr-2 h-4 w-4" />
-                      Order Now
-                    </Button>
+                    <Link href="/contact">
+                      <Button className="w-full bg-green-700 hover:bg-green-800">
+                        <ShoppingCart className="mr-2 h-4 w-4" />
+                        Order Now
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
 
@@ -403,9 +413,11 @@ export default function Products() {
                       Bring your own ingredients or select from our fresh produce. $2-3 processing fee.
                     </p>
                     <p className="text-2xl font-bold text-green-700 mb-3">$3.00+</p>
-                    <Button variant="outline" className="w-full border-green-700 text-green-700">
-                      Learn More
-                    </Button>
+                    <Link href="/contact">
+                      <Button variant="outline" className="w-full border-green-700 text-green-700">
+                        Learn More
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </div>
@@ -437,10 +449,12 @@ export default function Products() {
                       Explore our curated selection of natural energy boosters and wellness supplements from our 
                       trusted decade-long partner.
                     </p>
-                    <Button className="w-full bg-purple-700 hover:bg-purple-800">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      View Collection
-                    </Button>
+                    <Link href="/affiliate-products">
+                      <Button className="w-full bg-purple-700 hover:bg-purple-800">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        View Collection
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
 
