@@ -60,6 +60,12 @@ export default function Home() {
               <Link href="/contact"><a className="text-gray-700 hover:text-teal-600 font-medium">Contact</a></Link>
             </nav>
 
+            <a href="https://calendly.com/onetribeheru/connection" target="_blank" rel="noopener noreferrer">
+              <Button className="hidden md:inline-flex bg-gradient-to-r from-teal-600 to-amber-600 hover:from-teal-700 hover:to-amber-700">
+                <Calendar className="mr-2 h-4 w-4" />
+                Book Session
+              </Button>
+            </a>
             <Link href="/products">
               <Button className="hidden md:inline-flex bg-green-700 hover:bg-green-800">Shop Now</Button>
             </Link>
@@ -100,7 +106,16 @@ export default function Home() {
                   Contact
                 </a>
               </Link>
-              <div className="px-6 py-3">
+              <div className="px-6 py-3 space-y-3">
+                <a
+                  href="https://calendly.com/onetribeheru/connection"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-amber-600 hover:from-teal-700 hover:to-amber-700 text-white px-4 py-3 rounded-lg transition-colors font-semibold w-full"
+                >
+                  <Calendar className="w-5 h-5" />
+                  <span>Book Wellness Session</span>
+                </a>
                 <a
                   href="https://discord.gg/8CTbKaNd"
                   target="_blank"

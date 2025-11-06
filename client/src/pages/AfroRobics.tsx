@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Heart, Music, Zap, Users, Calendar, MapPin, Video, Coffee, Brain } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
+import Navigation from "@/components/Navigation";
 
 export default function AfroRobics() {
   const [email, setEmail] = useState("");
@@ -18,6 +19,7 @@ export default function AfroRobics() {
 
   return (
     <div className="min-h-screen">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-cyan-600 via-teal-700 to-emerald-800 text-white py-24 px-6 overflow-hidden">
         <div className="absolute inset-0 opacity-20">

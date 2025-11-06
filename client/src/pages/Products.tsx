@@ -2,47 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { APP_LOGO, APP_TITLE } from "@/const";
 import { ExternalLink, Leaf, ShoppingCart, Mail, Phone } from "lucide-react";
 import { Link } from "wouter";
+import Navigation from "@/components/Navigation";
 
 export default function Products() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Navigation Header */}
-      <header className="w-full border-b px-6 py-4 bg-white/95 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-3">
-              <img
-                src={APP_LOGO}
-                className="h-10 w-10 rounded-lg border-border bg-background object-cover"
-                alt="OneTribe Logo"
-              />
-              <span className="text-2xl font-bold text-green-800">{APP_TITLE}</span>
-            </a>
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/"><a className="text-gray-700 hover:text-green-700 font-medium">Home</a></Link>
-            <Link href="/products"><a className="text-green-700 font-bold">Products</a></Link>
-            <Link href="/services"><a className="text-gray-700 hover:text-green-700 font-medium">Services</a></Link>
-            <Link href="/blog"><a className="text-gray-700 hover:text-green-700 font-medium">Blog</a></Link>
-            <Link href="/contact"><a className="text-gray-700 hover:text-green-700 font-medium">Contact</a></Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <a href="tel:8032015723" className="hidden md:flex items-center gap-2 text-sm text-gray-600 hover:text-green-700">
-              <Phone className="h-4 w-4" />
-              (803) 201-5723
-            </a>
-            <Button className="bg-green-700 hover:bg-green-800">
-              <ShoppingCart className="mr-2 h-4 w-4" />
-              Cart (0)
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-12 px-6">

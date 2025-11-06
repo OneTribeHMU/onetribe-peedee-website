@@ -1,9 +1,11 @@
 import { Calendar, Mail, Phone, MessageCircle, MapPin } from 'lucide-react';
 import { Link } from 'wouter';
+import Navigation from '@/components/Navigation';
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-teal-600 to-amber-600">
         <div className="container mx-auto px-4">

@@ -3,10 +3,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HelpCircle, Leaf, Droplets, GraduationCap, Music, Package } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 export default function FAQ() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <Navigation />
       {/* Hero */}
       <section className="bg-gradient-to-r from-green-700 to-emerald-800 text-white py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">

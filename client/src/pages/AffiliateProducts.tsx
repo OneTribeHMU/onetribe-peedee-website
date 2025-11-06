@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Star, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
+import Navigation from "@/components/Navigation";
 
 const affiliateProducts = [
   {
@@ -117,6 +118,7 @@ export default function AffiliateProducts() {
 
   return (
     <div className="min-h-screen">
+      <Navigation />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">

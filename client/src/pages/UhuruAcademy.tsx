@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { BookOpen, Leaf, Palette, Cpu, Calendar, Mail, MapPin, Users } from "lucide-react";
 import { useState } from "react";
+import Navigation from "@/components/Navigation";
 
 export default function UhuruAcademy() {
   const [email, setEmail] = useState("");
@@ -19,6 +20,7 @@ export default function UhuruAcademy() {
 
   return (
     <div className="min-h-screen">
+      <Navigation />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
