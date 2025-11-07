@@ -96,9 +96,11 @@ export default function UhuruAcademy() {
                 Founded by Curtis Heru Boyd
               </h3>
               <p className="text-gray-700 mb-4">
-                Curtis Heru Boyd brings over a decade of educational experience to Uhuru Academy. 
-                As a certified educator with specialized training in AI integration, character 
-                development, and holistic wellness, Curtis has transformed the learning experiences 
+                Curtis Heru Boyd brings years of transformative educational experience to Uhuru Academy. 
+                He has taught for several years across Williamsburg, Marion, Marlboro, and Richland counties 
+                in South Carolina, as well as through edutainment groups like Book Beats and The Ethnomusicologist, 
+                bringing life to education through music and griot tales. With specialized training in AI integration, 
+                character development, and holistic wellness, Curtis has transformed the learning experiences 
                 of thousands of students throughout his career.
               </p>
               <blockquote className="border-l-4 border-amber-500 pl-4 italic text-gray-600">
