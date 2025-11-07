@@ -50,6 +50,7 @@ export default function Navigation() {
             <Link href="/products"><a className="text-gray-700 hover:text-green-700 font-medium">Products</a></Link>
             <Link href="/afrorobics"><a className="text-gray-700 hover:text-teal-600 font-medium">AfroRobics</a></Link>
             <Link href="/ai-hero-generation"><a className="text-gray-700 hover:text-purple-600 font-medium">AI Hero Program</a></Link>
+            <Link href="/ai-ethics-workshop"><a className="text-gray-700 hover:text-indigo-600 font-medium">AI Ethics</a></Link>
             <Link href="/uhuru-academy"><a className="text-gray-700 hover:text-purple-700 font-medium">Uhuru Academy</a></Link>
             <Link href="/faq"><a className="text-gray-700 hover:text-green-700 font-medium">FAQ</a></Link>
             <Link href="/contact"><a className="text-gray-700 hover:text-teal-600 font-medium">Contact</a></Link>
@@ -89,6 +90,11 @@ export default function Navigation() {
             <Link href="/ai-hero-generation">
               <a className="px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 font-medium" onClick={() => setMobileMenuOpen(false)}>
                 AI Hero Program
+              </a>
+            </Link>
+            <Link href="/ai-ethics-workshop">
+              <a className="px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-indigo-600 font-medium" onClick={() => setMobileMenuOpen(false)}>
+                AI Ethics Workshop
               </a>
             </Link>
             <Link href="/uhuru-academy">
