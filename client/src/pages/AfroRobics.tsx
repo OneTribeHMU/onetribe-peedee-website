@@ -10,11 +10,26 @@ import Navigation from "@/components/Navigation";
 export default function AfroRobics() {
   const [email, setEmail] = useState("");
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Integrate with email service
-    alert(`Thanks for your interest! We'll contact you at ${email}`);
-    setEmail("");
+    try {
+      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New AfroRobics Interest',
+          email: email
+        })
+      });
+      if (response.ok) {
+        alert(`Thanks for your interest! We'll contact you at ${email}`);
+        setEmail("");
+      } else {
+        alert('There was an error. Please try again or email us directly.');
+      }
+    } catch (error) {
+      alert('There was an error. Please email us at Curtisheru@onetribe.io');
+    }
   };
 
   return (

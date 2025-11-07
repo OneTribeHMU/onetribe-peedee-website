@@ -19,10 +19,26 @@ export default function AIEthicsWorkshop() {
     message: "" 
   });
 
-  const handleInquirySubmit = (e: React.FormEvent) => {
+  const handleInquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Thanks for your inquiry! We'll contact you at ${inquiryForm.email} with our AI Ethics Workshop information.`);
-    setInquiryForm({ schoolName: "", contactName: "", email: "", phone: "", district: "", students: "", workshopType: "", message: "" });
+    try {
+      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New AI Ethics Workshop Inquiry',
+          ...inquiryForm
+        })
+      });
+      if (response.ok) {
+        alert(`Thanks for your inquiry! We'll contact you at ${inquiryForm.email} with our AI Ethics Workshop information.`);
+        setInquiryForm({ schoolName: "", contactName: "", email: "", phone: "", district: "", students: "", workshopType: "", message: "" });
+      } else {
+        alert('There was an error submitting the form. Please try again or email us directly.');
+      }
+    } catch (error) {
+      alert('There was an error submitting the form. Please email us at Curtisheru@onetribe.io');
+    }
   };
 
   return (

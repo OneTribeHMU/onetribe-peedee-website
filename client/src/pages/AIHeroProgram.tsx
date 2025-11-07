@@ -11,18 +11,48 @@ export default function AIHeroProgram() {
   const [enrollForm, setEnrollForm] = useState({ name: "", email: "", phone: "", grade: "", message: "" });
   const [schoolForm, setSchoolForm] = useState({ schoolName: "", contactName: "", email: "", phone: "", district: "", students: "", message: "" });
 
-  const handleEnrollSubmit = (e: React.FormEvent) => {
+  const handleEnrollSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Integrate with email service or CRM
-    alert(`Thanks for your interest! We'll contact you at ${enrollForm.email} to complete enrollment.`);
-    setEnrollForm({ name: "", email: "", phone: "", grade: "", message: "" });
+    try {
+      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New AI Hero Program Enrollment',
+          ...enrollForm
+        })
+      });
+      if (response.ok) {
+        alert(`Thanks for your interest! We'll contact you at ${enrollForm.email} to complete enrollment.`);
+        setEnrollForm({ name: "", email: "", phone: "", grade: "", message: "" });
+      } else {
+        alert('There was an error submitting the form. Please try again or email us directly.');
+      }
+    } catch (error) {
+      alert('There was an error submitting the form. Please email us at Curtisheru@onetribe.io');
+    }
   };
 
-  const handleSchoolSubmit = (e: React.FormEvent) => {
+  const handleSchoolSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Integrate with email service or CRM
-    alert(`Thanks for your inquiry! We'll contact you at ${schoolForm.email} with our school partnership information.`);
-    setSchoolForm({ schoolName: "", contactName: "", email: "", phone: "", district: "", students: "", message: "" });
+    try {
+      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New AI Hero Program School Partnership Inquiry',
+          ...schoolForm
+        })
+      });
+      if (response.ok) {
+        alert(`Thanks for your inquiry! We'll contact you at ${schoolForm.email} with our school partnership information.`);
+        setSchoolForm({ schoolName: "", contactName: "", email: "", phone: "", district: "", students: "", message: "" });
+      } else {
+        alert('There was an error submitting the form. Please try again or email us directly.');
+      }
+    } catch (error) {
+      alert('There was an error submitting the form. Please email us at Curtisheru@onetribe.io');
+    }
   };
 
   return (

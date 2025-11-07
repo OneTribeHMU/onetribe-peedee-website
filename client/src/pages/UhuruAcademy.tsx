@@ -10,12 +10,27 @@ export default function UhuruAcademy() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Integrate with email service
-    console.log("Email submitted:", email);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    try {
+      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New Uhuru Academy Email Signup',
+          email: email
+        })
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setEmail("");
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        alert('There was an error. Please try again or email us directly.');
+      }
+    } catch (error) {
+      alert('There was an error. Please email us at Curtisheru@onetribe.io');
+    }
   };
 
   return (
