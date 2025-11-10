@@ -326,6 +326,87 @@ export default function AIHeroProgram() {
         </div>
       </section>
 
+      {/* Hero Showcase Gallery */}
+      <section className="py-20 px-6 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] animate-pulse"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-amber-500 text-white text-lg px-6 py-2">
+              <Sparkles className="inline h-5 w-5 mr-2" />
+              Student Creations
+            </Badge>
+            <h2 className="text-5xl font-bold mb-4">See What Students Create</h2>
+            <p className="text-2xl text-blue-100 max-w-3xl mx-auto">
+              From imagination to AI-generated heroes — real student artwork from our program
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Hero 1 - Purple Tech Hero */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <img 
+                src="/heroes/hero-purple-tech.jpg" 
+                alt="Student-created AI hero with purple tech suit and energy powers"
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Tech Guardian</h3>
+                  <p className="text-blue-200">Student-created hero with energy manipulation powers</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Hero 2 - Red Cape Hero */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <img 
+                src="/heroes/hero-red-cape.jpg" 
+                alt="Student-created AI hero with red and blue suit running with cape"
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Speed Runner</h3>
+                  <p className="text-blue-200">Student-created hero with super speed abilities</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Hero 3 - Red Mask Hero */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <img 
+                src="/heroes/hero-red-mask.jpg" 
+                alt="Student-created AI hero with red mask and cape in action pose"
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Crimson Defender</h3>
+                  <p className="text-blue-200">Student-created hero protecting the city</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Card className="max-w-3xl mx-auto bg-white/10 backdrop-blur border-white/20">
+              <CardContent className="p-8">
+                <p className="text-xl text-blue-100 mb-4">
+                  <strong className="text-amber-400">These are real AI heroes created by students in our program!</strong>
+                </p>
+                <p className="text-lg text-blue-200">
+                  Students start with hand-drawn characters, learn AI prompt engineering, and transform their artwork into stunning digital heroes. 
+                  Then they write stories and animate their creations to life!
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
