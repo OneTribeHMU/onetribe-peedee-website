@@ -4,33 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Heart, Music, Zap, Users, Calendar, MapPin, Video, Coffee, Brain } from "lucide-react";
 import { Link } from "wouter";
-import { useState } from "react";
 import Navigation from "@/components/Navigation";
 
 export default function AfroRobics() {
-  const [email, setEmail] = useState("");
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('https://formspree.io/f/xanaywak', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          _subject: 'New AfroRobics Interest',
-          email: email
-        })
-      });
-      if (response.ok) {
-        alert(`Thanks for your interest! We'll contact you at ${email}`);
-        setEmail("");
-      } else {
-        alert('There was an error. Please try again or email us directly.');
-      }
-    } catch (error) {
-      alert('There was an error. Please email us at Curtisheru@onetribe.io');
-    }
-  };
 
   return (
     <div className="min-h-screen">

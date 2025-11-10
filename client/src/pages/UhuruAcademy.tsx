@@ -3,35 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { BookOpen, Leaf, Palette, Cpu, Calendar, Mail, MapPin, Users } from "lucide-react";
-import { useState } from "react";
 import Navigation from "@/components/Navigation";
 
 export default function UhuruAcademy() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('https://formspree.io/f/xyzlygbr', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          _subject: 'New Uhuru Academy Email Signup',
-          email: email
-        })
-      });
-      if (response.ok) {
-        setSubmitted(true);
-        setEmail("");
-        setTimeout(() => setSubmitted(false), 3000);
-      } else {
-        alert('There was an error. Please try again or email us directly.');
-      }
-    } catch (error) {
-      alert('There was an error. Please email us at Curtisheru@onetribe.io');
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -61,17 +35,17 @@ export default function UhuruAcademy() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="flex gap-2">
+              <form action="https://formspree.io/f/xyzlygbr" method="POST" className="flex gap-2">
                 <Input
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   required
                   className="bg-white/90 text-gray-900"
                 />
+                <input type="hidden" name="_subject" value="New Uhuru Academy Email Signup" />
                 <Button type="submit" className="bg-amber-500 hover:bg-amber-600 whitespace-nowrap">
-                  {submitted ? "✓ Joined!" : "Join"}
+                  Join
                 </Button>
               </form>
               <p className="text-xs text-blue-200 mt-2 text-center">
@@ -410,17 +384,17 @@ export default function UhuruAcademy() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form action="https://formspree.io/f/xyzlygbr" method="POST" className="space-y-4">
                 <Input
                   type="email"
+                  name="email"
                   placeholder="Your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   required
                   className="bg-white/90 text-gray-900"
                 />
+                <input type="hidden" name="_subject" value="New Uhuru Academy Email Signup" />
                 <Button type="submit" className="w-full bg-amber-500 hover:bg-amber-600 text-lg">
-                  {submitted ? "✓ You're on the list!" : "Join Our Community"}
+                  Join Our Community
                 </Button>
               </form>
               <div className="mt-4 text-sm text-blue-200">

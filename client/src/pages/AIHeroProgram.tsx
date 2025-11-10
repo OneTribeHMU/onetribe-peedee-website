@@ -5,55 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import { Sparkles, Users, BookOpen, Video, Award, School, CheckCircle, Rocket } from "lucide-react";
-import { useState } from "react";
 
 export default function AIHeroProgram() {
-  const [enrollForm, setEnrollForm] = useState({ name: "", email: "", phone: "", grade: "", message: "" });
-  const [schoolForm, setSchoolForm] = useState({ schoolName: "", contactName: "", email: "", phone: "", district: "", students: "", message: "" });
-
-  const handleEnrollSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('https://formspree.io/f/myzlygnr', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          _subject: 'New AI Hero Program Enrollment',
-          ...enrollForm
-        })
-      });
-      if (response.ok) {
-        alert(`Thanks for your interest! We'll contact you at ${enrollForm.email} to complete enrollment.`);
-        setEnrollForm({ name: "", email: "", phone: "", grade: "", message: "" });
-      } else {
-        alert('There was an error submitting the form. Please try again or email us directly.');
-      }
-    } catch (error) {
-      alert('There was an error submitting the form. Please email us at Curtisheru@onetribe.io');
-    }
-  };
-
-  const handleSchoolSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('https://formspree.io/f/myzlygnr', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          _subject: 'New AI Hero Program School Partnership Inquiry',
-          ...schoolForm
-        })
-      });
-      if (response.ok) {
-        alert(`Thanks for your inquiry! We'll contact you at ${schoolForm.email} with our school partnership information.`);
-        setSchoolForm({ schoolName: "", contactName: "", email: "", phone: "", district: "", students: "", message: "" });
-      } else {
-        alert('There was an error submitting the form. Please try again or email us directly.');
-      }
-    } catch (error) {
-      alert('There was an error submitting the form. Please email us at Curtisheru@onetribe.io');
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -433,14 +386,14 @@ export default function AIHeroProgram() {
 
           <Card className="border-2 border-purple-300">
             <CardContent className="p-8">
-              <form onSubmit={handleEnrollSubmit} className="space-y-6">
+              <form action="https://formspree.io/f/myzlygnr" method="POST" className="space-y-6">
+                <input type="hidden" name="_subject" value="New AI Hero Program Enrollment" />
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Student Name *</label>
                     <Input
                       required
-                      value={enrollForm.name}
-                      onChange={(e) => setEnrollForm({...enrollForm, name: e.target.value})}
+                      name="name"
                       placeholder="First and Last Name"
                     />
                   </div>
@@ -448,8 +401,7 @@ export default function AIHeroProgram() {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Grade Level *</label>
                     <Input
                       required
-                      value={enrollForm.grade}
-                      onChange={(e) => setEnrollForm({...enrollForm, grade: e.target.value})}
+                      name="grade"
                       placeholder="e.g., 6th Grade"
                     />
                   </div>
@@ -461,8 +413,7 @@ export default function AIHeroProgram() {
                     <Input
                       required
                       type="email"
-                      value={enrollForm.email}
-                      onChange={(e) => setEnrollForm({...enrollForm, email: e.target.value})}
+                      name="email"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -471,8 +422,7 @@ export default function AIHeroProgram() {
                     <Input
                       required
                       type="tel"
-                      value={enrollForm.phone}
-                      onChange={(e) => setEnrollForm({...enrollForm, phone: e.target.value})}
+                      name="phone"
                       placeholder="(803) 555-1234"
                     />
                   </div>
@@ -481,8 +431,7 @@ export default function AIHeroProgram() {
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Questions or Special Needs</label>
                   <Textarea
-                    value={enrollForm.message}
-                    onChange={(e) => setEnrollForm({...enrollForm, message: e.target.value})}
+                    name="message"
                     placeholder="Tell us about your child's interests, learning needs, or any questions you have..."
                     rows={4}
                   />
@@ -537,14 +486,14 @@ export default function AIHeroProgram() {
                 </div>
               </div>
 
-              <form onSubmit={handleSchoolSubmit} className="space-y-6">
+              <form action="https://formspree.io/f/myzlygnr" method="POST" className="space-y-6">
+                <input type="hidden" name="_subject" value="New AI Hero Program School Partnership Inquiry" />
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-white mb-2">School Name *</label>
                     <Input
                       required
-                      value={schoolForm.schoolName}
-                      onChange={(e) => setSchoolForm({...schoolForm, schoolName: e.target.value})}
+                      name="schoolName"
                       placeholder="School or District Name"
                       className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                     />
@@ -553,8 +502,7 @@ export default function AIHeroProgram() {
                     <label className="block text-sm font-semibold text-white mb-2">District *</label>
                     <Input
                       required
-                      value={schoolForm.district}
-                      onChange={(e) => setSchoolForm({...schoolForm, district: e.target.value})}
+                      name="district"
                       placeholder="School District"
                       className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                     />
@@ -566,8 +514,7 @@ export default function AIHeroProgram() {
                     <label className="block text-sm font-semibold text-white mb-2">Contact Name *</label>
                     <Input
                       required
-                      value={schoolForm.contactName}
-                      onChange={(e) => setSchoolForm({...schoolForm, contactName: e.target.value})}
+                      name="contactName"
                       placeholder="Principal, Administrator, etc."
                       className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                     />
@@ -575,8 +522,7 @@ export default function AIHeroProgram() {
                   <div>
                     <label className="block text-sm font-semibold text-white mb-2">Estimated Students</label>
                     <Input
-                      value={schoolForm.students}
-                      onChange={(e) => setSchoolForm({...schoolForm, students: e.target.value})}
+                      name="students"
                       placeholder="e.g., 50-100"
                       className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                     />
@@ -589,8 +535,7 @@ export default function AIHeroProgram() {
                     <Input
                       required
                       type="email"
-                      value={schoolForm.email}
-                      onChange={(e) => setSchoolForm({...schoolForm, email: e.target.value})}
+                      name="email"
                       placeholder="your@school.edu"
                       className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                     />
@@ -600,8 +545,7 @@ export default function AIHeroProgram() {
                     <Input
                       required
                       type="tel"
-                      value={schoolForm.phone}
-                      onChange={(e) => setSchoolForm({...schoolForm, phone: e.target.value})}
+                      name="phone"
                       placeholder="(803) 555-1234"
                       className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                     />
@@ -611,8 +555,7 @@ export default function AIHeroProgram() {
                 <div>
                   <label className="block text-sm font-semibold text-white mb-2">Tell Us About Your Needs</label>
                   <Textarea
-                    value={schoolForm.message}
-                    onChange={(e) => setSchoolForm({...schoolForm, message: e.target.value})}
+                    name="message"
                     placeholder="Grade levels, number of students, timeline, budget considerations, specific goals..."
                     rows={4}
                     className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
