@@ -643,7 +643,32 @@ export default function AfroRobics() {
             </a>
           </div>
 
-          <div className="mt-12 text-cyan-100">
+          {/* Email Signup Form */}
+          <Card className="max-w-md mx-auto mt-12 bg-white/10 backdrop-blur border-white/20">
+            <CardHeader>
+              <CardTitle className="text-white text-center">Stay Updated</CardTitle>
+              <CardDescription className="text-cyan-100 text-center">
+                Get class schedules, special events, and wellness tips
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form action="https://formspree.io/f/xanaywak" method="POST" className="flex gap-2">
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  className="bg-white/90 text-gray-900"
+                />
+                <input type="hidden" name="_subject" value="New AfroRobics Interest" />
+                <Button type="submit" className="bg-amber-500 hover:bg-amber-600 whitespace-nowrap">
+                  Join
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+
+          <div className="mt-8 text-cyan-100">
             <p className="text-lg">
               Contact: <a href="mailto:Curtisheru@onetribe.io" className="underline hover:text-white">Curtisheru@onetribe.io</a> | 
               <a href="tel:+18032015723" className="underline hover:text-white ml-2">(803) 201-5723</a>
