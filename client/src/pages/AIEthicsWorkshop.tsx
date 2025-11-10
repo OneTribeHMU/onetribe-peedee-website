@@ -22,7 +22,7 @@ export default function AIEthicsWorkshop() {
   const handleInquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+      const response = await fetch('https://formspree.io/f/xjkjvbpj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

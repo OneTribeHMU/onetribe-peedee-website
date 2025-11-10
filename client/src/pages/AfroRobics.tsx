@@ -13,7 +13,7 @@ export default function AfroRobics() {
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+      const response = await fetch('https://formspree.io/f/xanaywak', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

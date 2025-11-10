@@ -14,7 +14,7 @@ export default function AIHeroProgram() {
   const handleEnrollSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+      const response = await fetch('https://formspree.io/f/myzlygnr', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -36,7 +36,7 @@ export default function AIHeroProgram() {
   const handleSchoolSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://formspree.io/f/xwppbvvl', {
+      const response = await fetch('https://formspree.io/f/myzlygnr', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
