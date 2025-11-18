@@ -2,9 +2,35 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
-import { Heart, Sparkles, Download, Calendar, Phone, Mail } from "lucide-react";
+import { Heart, Sparkles, Download, Calendar, Phone, Mail, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 export default function WellnessCoach() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const matImages = [
+    {
+      src: "/wellness/amethyst-mat-full.png",
+      alt: "Professional Amethyst Mat with LED lights"
+    },
+    {
+      src: "/wellness/amethyst-mat-crystals.jpg",
+      alt: "Close-up of Amethyst crystal strips"
+    },
+    {
+      src: "/wellness/amethyst-mat-controller.png",
+      alt: "Temperature controller and mat detail"
+    }
+  ];
+  
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % matImages.length);
+  };
+  
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + matImages.length) % matImages.length);
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -169,13 +195,57 @@ export default function WellnessCoach() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image */}
+            {/* Carousel */}
             <div className="relative">
-              <img 
-                src="/wellness/amethyst-mat-promo.png" 
-                alt="$25 Introductory Offer - 30-Minute Mobile Healing Session with Amethyst Mat"
-                className="w-full rounded-2xl shadow-2xl"
-              />
+              {/* Main Carousel Image */}
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img 
+                  src={matImages[currentSlide].src}
+                  alt={matImages[currentSlide].alt}
+                  className="w-full h-auto transition-opacity duration-500"
+                />
+                
+                {/* Navigation Buttons */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-purple-900 rounded-full p-3 shadow-lg transition-all"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-purple-900 rounded-full p-3 shadow-lg transition-all"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+                
+                {/* Slide Indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {matImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-all ${
+                        currentSlide === index 
+                          ? 'bg-white w-8' 
+                          : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+              
+              {/* $25 Promo Badge */}
+              <div className="mt-6">
+                <img 
+                  src="/wellness/amethyst-mat-promo.png" 
+                  alt="$25 Introductory Offer - 30-Minute Mobile Healing Session with Amethyst Mat"
+                  className="w-full rounded-2xl shadow-xl"
+                />
+              </div>
             </div>
 
             {/* Content */}
