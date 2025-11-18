@@ -391,6 +391,72 @@ export default function AIHeroProgram() {
             </div>
           </div>
 
+          {/* 1st Grader Progression Showcase */}
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              <Badge className="mb-4 bg-green-500 text-white text-lg px-6 py-2">
+                <Sparkles className="inline h-5 w-5 mr-2" />
+                1st Grader Success Story
+              </Badge>
+              <h3 className="text-4xl font-bold mb-4">From Hand-Drawn to Animated Hero</h3>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Watch a 1st grader's journey from crayon drawing to fully animated AI hero
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-8">
+              {/* Original Drawing */}
+              <Card className="bg-white/10 backdrop-blur border-white/20 overflow-hidden">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl">Step 1: Hand-Drawn Character</CardTitle>
+                  <CardDescription className="text-blue-200">Original artwork by 1st grade student</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <img 
+                    src="/ai-hero-student/original-drawing.jpg" 
+                    alt="1st grader's original hand-drawn character"
+                    className="w-full rounded-lg shadow-xl"
+                  />
+                </CardContent>
+              </Card>
+
+              {/* AI-Generated Hero */}
+              <Card className="bg-white/10 backdrop-blur border-white/20 overflow-hidden">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl">Step 2: AI-Generated Hero</CardTitle>
+                  <CardDescription className="text-blue-200">Transformed into stunning digital art</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <img 
+                    src="/ai-hero-student/animated-hero.png" 
+                    alt="1st grader's AI-generated animated hero"
+                    className="w-full rounded-lg shadow-xl"
+                  />
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Video Showcase */}
+            <div className="max-w-4xl mx-auto mb-8">
+              <Card className="bg-white/10 backdrop-blur border-white/20 overflow-hidden">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl">Step 3: Animated Story</CardTitle>
+                  <CardDescription className="text-blue-200">Watch the hero come to life with animation</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <video 
+                    controls 
+                    className="w-full rounded-lg shadow-xl"
+                    poster="/ai-hero-student/animated-hero.png"
+                  >
+                    <source src="/ai-hero-student/progression-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
           <div className="text-center">
             <Card className="max-w-3xl mx-auto bg-white/10 backdrop-blur border-white/20">
               <CardContent className="p-8">

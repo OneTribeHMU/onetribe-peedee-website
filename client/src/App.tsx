@@ -9,6 +9,7 @@ import FAQ from "@/pages/FAQ";
 import Contact from "@/pages/Contact";
 import AIHeroProgram from "@/pages/AIHeroProgram";
 import AIEthicsWorkshop from "@/pages/AIEthicsWorkshop";
+import WellnessCoach from "@/pages/WellnessCoach";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -26,6 +27,7 @@ function Router() {
       <Route path={"/contact"} component={Contact} />
       <Route path={"/ai-hero-generation"} component={AIHeroProgram} />
       <Route path={"/ai-ethics-workshop"} component={AIEthicsWorkshop} />
+      <Route path={"/wellness-coach"} component={WellnessCoach} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
