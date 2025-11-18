@@ -10,9 +10,16 @@ export default function Navigation() {
     <header className="w-full border-b px-6 py-4 bg-white/95 backdrop-blur sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/">
-          <a className="flex flex-col">
-            <span className="text-2xl font-bold text-amber-700">OneTribe</span>
-            <span className="text-xs text-gray-600 -mt-1">AMA-GI</span>
+          <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img
+              src="/images/onetribe-amagi-logo.png"
+              className="h-14 w-14 object-contain"
+              alt="OneTribe Ama-Gi Logo"
+            />
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-amber-700">OneTribe</span>
+              <span className="text-xs text-gray-600 -mt-1">AMA-GI</span>
+            </div>
           </a>
         </Link>
 
