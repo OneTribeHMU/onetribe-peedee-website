@@ -9,17 +9,12 @@ export default function Navigation() {
   return (
     <header className="w-full border-b px-6 py-4 bg-white/95 backdrop-blur sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <img
-            src="/images/logos/onetribe-amagi-logo.png"
-            className="h-12 w-12 object-contain"
-            alt="OneTribe Ama-Gi Logo"
-          />
-          <div className="flex flex-col">
+        <Link href="/">
+          <a className="flex flex-col">
             <span className="text-2xl font-bold text-amber-700">OneTribe</span>
             <span className="text-xs text-gray-600 -mt-1">AMA-GI</span>
-          </div>
-        </div>
+          </a>
+        </Link>
 
         <div className="flex items-center gap-4">
           {/* Discord Quick Access */}

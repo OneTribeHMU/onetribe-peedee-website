@@ -496,9 +496,9 @@ export default function Products() {
       <footer className="bg-gray-900 text-gray-300 py-12 px-6 mt-auto">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">OneTribe Pee Dee Aquaponics</h3>
+            <h3 className="text-white font-bold text-lg mb-4">OneTribe Ama-Gi</h3>
             <p className="text-sm mb-4">
-              Bringing natural wellness and sustainable agriculture to the Pee Dee region.
+              Bringing natural wellness and sustainable agriculture to the community.
             </p>
             <div className="space-y-2 text-sm">
               <p className="flex items-center gap-2">
@@ -546,9 +546,9 @@ export default function Products() {
         </div>
 
         <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-          <p>&copy; 2025 OneTribe Pee Dee Aquaponics. All rights reserved.</p>
+          <p>&copy; 2025 OneTribe Ama-Gi. All rights reserved.</p>
           <p className="mt-2 text-gray-500">
-            Made with love in the Pee Dee region | Social: @PeeDeeAquaponics
+            Made with love | Pee Dee Aquaponics products available
           </p>
         </div>
       </footer>

@@ -1,9 +1,9 @@
 /**
- * Shared configuration and constants for OneTribe Ama-Gi & Pee Dee Aquaponics
+ * Shared configuration and constants for OneTribe Ama-Gi
  */
 
 export const SITE_CONFIG = {
-  name: "OneTribe Ama-Gi & Pee Dee Aquaponics",
+  name: "OneTribe Ama-Gi",
   tagline: "Holistic Wellness & Sustainable Agriculture",
   description: "Ancient wisdom meets modern technology for holistic wellness, sustainable farming, and community empowerment",
   
