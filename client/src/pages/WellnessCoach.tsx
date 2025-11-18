@@ -227,6 +227,64 @@ export default function WellnessCoach() {
         </div>
       </section>
 
+      {/* Tea Time Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="relative">
+              <img 
+                src="/tea-time-afrorobics.jpg" 
+                alt="Tea Time - Wellness Rooted in Wholeness"
+                className="w-full rounded-2xl shadow-2xl"
+              />
+            </div>
+
+            {/* Content */}
+            <div>
+              <Badge className="mb-4 bg-amber-600 text-white text-lg px-6 py-2">
+                Every Session Includes
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Tea Time Ritual
+              </h2>
+              <p className="text-xl text-gray-700 mb-6">
+                <strong>Wellness Rooted in Wholeness</strong>
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                Every wellness coaching session includes a mindful tea ritual. Experience the grounding power of our 
+                signature wild-harvested Sarsaparilla Rhizome Tea - the only tea using the powerful rhizome root.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <span className="text-amber-600 mr-3 text-2xl">✓</span>
+                  <span className="text-lg">Wild-harvested sarsaparilla rhizome</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-amber-600 mr-3 text-2xl">✓</span>
+                  <span className="text-lg">Traditional preparation methods</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-amber-600 mr-3 text-2xl">✓</span>
+                  <span className="text-lg">Mindful presence & grounding</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-amber-600 mr-3 text-2xl">✓</span>
+                  <span className="text-lg">Available for purchase to continue at home</span>
+                </div>
+              </div>
+
+              <a href="/products">
+                <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-lg px-8">
+                  Shop Sarsaparilla Tea
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
