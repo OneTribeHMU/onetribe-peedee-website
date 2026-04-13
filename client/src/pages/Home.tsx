@@ -43,6 +43,9 @@ export default function Home() {
             <Link href="/afrorobics">
               <a className="text-gray-700 hover:text-green-700 font-medium">AfroRobics</a>
             </Link>
+            <Link href="/mushroom-workshop">
+              <a className="text-gray-700 hover:text-amber-700 font-medium">🍄 Mushroom Workshop</a>
+            </Link>
             <Link href="/faq">
               <a className="text-gray-700 hover:text-green-700 font-medium">FAQ</a>
             </Link>
