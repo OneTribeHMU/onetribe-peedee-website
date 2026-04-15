@@ -23,7 +23,7 @@ export default function MushroomWorkshop() {
   const sessions = [
     {
       number: 1,
-      date: "Friday, May 9, 2025",
+      date: "Friday, May 23, 2025",
       title: "Foundations of Mycology",
       topics: [
         "Mushroom biology & life cycle",
@@ -34,7 +34,7 @@ export default function MushroomWorkshop() {
     },
     {
       number: 2,
-      date: "Friday, May 16, 2025",
+      date: "Thursday, June 5, 2025",
       title: "Inoculation & Cultivation",
       topics: [
         "Grain-to-grain spawn transfer techniques",
@@ -45,7 +45,7 @@ export default function MushroomWorkshop() {
     },
     {
       number: 3,
-      date: "Friday, May 23, 2025",
+      date: "Wednesday, June 18, 2025",
       title: "Harvest, Processing & Sales",
       topics: [
         "Harvesting best practices for maximum yield",
@@ -62,7 +62,7 @@ export default function MushroomWorkshop() {
     { icon: Leaf, label: "Inoculated Tree Logs — produce mushrooms for years" },
     { icon: Package, label: "Mushroom Growing Supplies & Tools" },
     { icon: Package, label: "Tincture Bottles & Processing Materials" },
-    { icon: ChefHat, label: "Catered Plant-Based Lunch — all 3 sessions" },
+    { icon: ChefHat, label: "Full Catered Meal — all 3 sessions (11:00 AM – 3:00 PM)" },
   ];
 
   const marketPrices = [
@@ -128,11 +128,11 @@ export default function MushroomWorkshop() {
           <div className="flex flex-wrap gap-6 justify-center mb-10 text-green-100">
             <div className="flex items-center gap-2">
               <Calendar className="h-5 w-5 text-amber-400" />
-              <span>May 9, 16 & 23, 2025</span>
+              <span>May 23, June 5 & June 18, 2025</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-5 w-5 text-amber-400" />
-              <span>10:00 AM – 1:00 PM each session</span>
+              <span>11:00 AM – 3:00 PM each session</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-amber-400" />
@@ -229,7 +229,7 @@ export default function MushroomWorkshop() {
                   <Badge className="w-fit bg-amber-500 text-white mb-2">Session {session.number}</Badge>
                   <CardTitle className="text-lg">{session.title}</CardTitle>
                   <p className="text-green-200 text-sm">{session.date}</p>
-                  <p className="text-green-200 text-sm">10:00 AM – 1:00 PM</p>
+                  <p className="text-green-200 text-sm">11:00 AM – 3:00 PM</p>
                 </CardHeader>
                 <CardContent className="pt-4">
                   <ul className="space-y-2">
