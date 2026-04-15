@@ -120,6 +120,9 @@ export default function MushroomWorkshop() {
           <p className="text-2xl text-green-100 italic mb-6">
             From Spore to Harvest — A 3-Part Hands-On Intensive
           </p>
+          <p className="text-amber-300 font-semibold mb-2 text-lg">
+            Hosted by Curtis Boyd | OneTribe Ama-Gi Farm
+          </p>
           <p className="text-lg text-green-200 mb-10 max-w-3xl mx-auto">
             Learn to grow high-value specialty mushrooms with expert mycologist Kadedra from the
             GRAINN School of Mycology. Walk away with everything you need to start producing your
