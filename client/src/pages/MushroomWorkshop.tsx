@@ -289,6 +289,41 @@ export default function MushroomWorkshop() {
         </div>
       </section>
 
+      {/* Venue & Location */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Where It All Happens</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* The Kanvas */}
+            <div className="bg-gradient-to-br from-green-800 to-emerald-700 text-white rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <MapPin className="h-8 w-8 text-amber-400 shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold">The Kanvas</h3>
+                  <p className="text-green-200 text-sm">128 Hampton Ave, Kingstree, SC</p>
+                </div>
+              </div>
+              <p className="text-green-100 leading-relaxed">
+                <span className="text-amber-300 font-semibold">Meet & Greet Space.</span> Each session begins at The Kanvas — a creative community hub in the heart of Kingstree. This is where you'll gather, connect with fellow participants, receive instruction, and enjoy your catered meal before heading out to the field.
+              </p>
+            </div>
+            {/* Hell Half Acre */}
+            <div className="bg-gradient-to-br from-amber-800 to-amber-700 text-white rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <Leaf className="h-8 w-8 text-amber-300 shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold">Hell Half Acre Community</h3>
+                  <p className="text-amber-200 text-sm">OneTribe Ama-Gi Farm Fields, Williamsburg County</p>
+                </div>
+              </div>
+              <p className="text-amber-100 leading-relaxed">
+                <span className="text-white font-semibold">Hiking, Forest & Field Work.</span> The hands-on outdoor portion takes place at one of OneTribe Farm's fields in the historic Hell Half Acre Community — home of <span className="font-semibold">McCollough's Blue Landing</span>, Williamsburg County's oldest family-owned gas station. You'll explore the forest, work with logs and substrate in a real farm setting, and connect with the land where these mushrooms naturally thrive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Instructor */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-3xl mx-auto text-center">
